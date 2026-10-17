@@ -83,7 +83,7 @@ research as a product, not just documents:
   and skills, with a discoverable OpenAPI contract
   (`site/public/api/openapi.json`), a data catalog, and downloadable
   Markdown/JSON datasets for AI-agent use.
-- **AI Skills Archive** — 20 derived AI-agent skills under
+- **AI Skills Archive** — 39 derived AI-agent skills under
   `site/public/content/skills/` (searchable, each with a downloadable
   `SKILL.md`; connector entries carry credential *references* only, never
   credential values).
