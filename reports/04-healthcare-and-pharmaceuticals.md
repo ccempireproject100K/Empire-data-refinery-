@@ -1,0 +1,74 @@
+# Healthcare and pharmaceuticals — 20/20 data refinery sector report
+
+## Bottom line
+
+**Healthcare and pharmaceuticals is financially attractive in the 2020s because demand is essential, spending is large and persistent, public programs and employer coverage create recurring payment streams, and innovation can produce high-value products with strong pricing power.** This is an evidence-backed sector thesis, not a claim that every company or subindustry is profitable. Regulation, reimbursement pressure, litigation, patent expiry, clinical failure, labor costs, and political scrutiny can materially change outcomes.
+
+CMS reports that U.S. national health expenditures reached **$5.3 trillion in 2024**, up **7.2%**, equal to **18.0% of GDP**. Private health insurance spending was $1.645 trillion (+8.8%), hospital spending $1.635 trillion (+8.9%), physician and clinical services $1.110 trillion (+8.1%), and prescription drug spending $467.0 billion (+7.9%). CMS projects 2025–2034 average annual growth of **5.4%**, faster than projected GDP growth of 4.1%, lifting healthcare’s GDP share to 20.6% by 2034. Retail prescription-drug spending is projected to grow 5.7% annually over that period. ([CMS NHE Fact Sheet](https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet))
+
+## Why the sector can be lucrative in the 2020s
+
+1. **Large, recurring and relatively defensive demand.** Medical care, medicines, insurance coverage and diagnostics are necessities. The CMS data show continued spending growth across hospitals, clinical services, private insurance and prescription drugs rather than a one-off pandemic spike.
+2. **Aging and chronic disease intensity.** CMS reports that in 2020 people aged 65+ represented about 17% of the population but 37% of personal healthcare spending; per-person spending was $22,356, over five times children’s spending. This supports durable demand for Medicare, specialty medicines, chronic-care management, devices and post-acute services. ([CMS NHE Fact Sheet](https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet))
+3. **Recurring reimbursement pools.** Medicare, Medicaid, private insurance and employer-sponsored plans provide recurring revenue channels. The same CMS release says the federal government sponsored 31% of 2024 NHE and households 28%; private business sponsored 18%. This funding mix can stabilize demand, while also creating policy and rate risk.
+4. **Innovation and differentiated intellectual property.** FDA’s CDER approved **50 novel drugs in 2024**, defined as drugs never before approved or marketed in the U.S. New products can command high economic value when they address serious disease or major unmet need, though the result is uncertain and development costs are high. ([FDA 2024 Novel Drug Approvals](https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2024))
+5. **Scale, data and vertical integration.** Insurers, care providers, pharmacy benefit managers, pharmacies and health-technology firms can improve economics through purchasing scale, risk management, data/analytics, utilization management and integrated care. UnitedHealth’s 2024 filing illustrates the model: Optum combined care, pharmacy and analytics services and produced $253.0 billion revenue and $16.7 billion operating earnings, while UnitedHealthcare produced $298.2 billion revenue and $15.6 billion operating earnings. ([UnitedHealth 2024 results filed with SEC](https://www.sec.gov/Archives/edgar/data/731766/000073176625000022/a2024q4exhibit991.htm))
+6. **High-growth therapeutic categories.** Eli Lilly’s 2024 results show how a successful product cycle can change economics: full-year revenue was $45.04 billion, up 32%; Mounjaro revenue rose 124% to $11.54 billion and Zepbound generated $4.93 billion after its 2023 launch. Lilly reported 81.3% full-year gross margin. These are company-reported results, not a forecast for the whole drug industry. ([Lilly Q4/full-year 2024 results](https://investor.lilly.com/news-releases/news-release-details/lilly-reports-full-q4-2024-financial-results-and-provides-2025))
+
+## Most relevant industries / value-chain segments
+
+- **Pharmaceuticals and biotechnology:** novel drugs, specialty medicines, vaccines, generics and biosimilars. Key drivers are clinical innovation, patent/exclusivity duration, manufacturing capacity and payer access.
+- **Managed care and health insurance:** commercial insurance, Medicare Advantage, Medicaid managed care and specialty benefits. Revenue is recurring premium/contract revenue; profitability depends on medical-cost ratios, risk adjustment, pricing and regulation.
+- **Hospitals and physician/provider networks:** acute care, outpatient care, ambulatory surgery, primary care and value-based care. Demand is large, but margins face labor, wage, payer-mix and capital-intensity pressure.
+- **Pharmacy benefit management, specialty pharmacy and retail pharmacy:** prescription fulfillment, formulary management, specialty distribution and adherence services. Scale and integration matter; rebate transparency and reimbursement regulation are material risks.
+- **Medical devices and diagnostics:** implants, surgical tools, monitoring, imaging, lab testing and diagnostic platforms. Recurring procedure volumes, installed bases and consumables can support attractive economics.
+- **Contract research, contract development/manufacturing and life-science tools:** clinical-trial services, laboratory instruments, biologics manufacturing and supply-chain infrastructure. These are “picks-and-shovels” exposures to R&D and drug production rather than direct drug-price exposure.
+- **Healthcare IT, data and analytics:** electronic records, revenue-cycle management, interoperability, clinical decision support, cybersecurity and AI-enabled workflow. Adoption is supported by administrative complexity, though procurement cycles and privacy/cyber risk are significant.
+
+## Candidate leading companies (not a ranking)
+
+These are **candidate names for further diligence**, selected for scale, visible public filings, strategic relevance or exposure to attractive segments. They are not presented as the 20/20 “top” companies, and no ranking is implied.
+
+- **UnitedHealth Group** — managed care plus Optum care, pharmacy and analytics. 2024 revenue $400.3 billion and operating earnings $32.3 billion; Optum revenue grew 12%. ([SEC-filed 2024 results](https://www.sec.gov/Archives/edgar/data/731766/000073176625000022/a2024q4exhibit991.htm))
+- **Eli Lilly** — innovative pharmaceuticals, especially incretin/obesity and diabetes exposure. 2024 revenue $45.04 billion, +32%; Mounjaro and Zepbound were the major growth drivers. ([company 2024 results](https://investor.lilly.com/news-releases/news-release-details/lilly-reports-full-q4-2024-financial-results-and-provides-2025))
+- **Johnson & Johnson** — innovative medicine and MedTech diversification. 2024 worldwide sales were $88.821 billion, with $17.232 billion of R&D expense; the filing states new products introduced within five years were about 25% of 2024 sales. ([2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/200406/000020040625000038/jnj-20241229.htm))
+- **Novo Nordisk, AbbVie, Merck & Co., Pfizer and Roche** — candidate large-cap innovative pharmaceutical peers with major chronic-disease, immunology, oncology, vaccine or specialty-medicine exposure. Verify current sales, pipeline quality, patent calendars and geographic mix in each company’s latest annual report before using them in a ranking.
+- **CVS Health, Cigna/Evernorth, Elevance Health and Humana** — candidate payer/PBM/pharmacy and Medicare-oriented names. Compare medical-cost ratios, membership trends, star ratings, reimbursement rates and regulatory exposure rather than relying on revenue size alone.
+- **HCA Healthcare, Tenet Healthcare and Community Health Systems** — candidate hospital/provider operators. Compare occupancy, case mix, payer mix, labor costs, same-facility growth, leverage and CMS quality data.
+- **Medtronic, Abbott, Stryker, Boston Scientific, Siemens Healthineers and GE HealthCare** — candidate device, diagnostics and imaging platforms. Compare procedure growth, recurring consumables, installed base, innovation and reimbursement.
+- **Thermo Fisher Scientific, Danaher, IQVIA and Lonza** — candidate life-science tools, CRO and CDMO exposures. Evaluate end-market cyclicality, backlog, utilization, customer concentration and biologics capacity.
+
+## Customer-quality and satisfaction signals
+
+**Measured satisfaction evidence:** J.D. Power’s 2025 U.S. Commercial Member Health Plan Study covered **39,797 members**, 147 plans and 22 regions. The national average score was **563/1,000**, with regional scores from 523 to 594. The study measures access, digital channels, ease of doing business, time/money savings, people, coverage, problem resolution and trust. J.D. Power also reports that 20% of employers cite low employee satisfaction as a top reason for switching plans. ([J.D. Power 2025 study](https://www.jdpower.com/business/press-releases/2025-us-commercial-member-health-plan-study/))
+
+**Provider/patient experience:** ACSI’s public healthcare benchmark reports 2025 satisfaction of **77 for hospitals**, up from 75 in 2024, while nonhospital care fell from 83 to 79. Its hospital sub-benchmarks were 83 outpatient, 81 inpatient and 72 emergency-room care. ACSI says results are weighted by company market share and 2025 data were collected October 2024–September 2025. ([ACSI Health Care](https://theacsi.com/industries/health-care/))
+
+**Objective quality and outcome signals:** CMS’s Overall Hospital Quality Star Rating aggregates publicly reported measures across mortality, safety of care, readmission, patient experience, and timely/effective care. The 2026 methodology weights the first four groups at 22% each and timely/effective care at 12%, using 52 measures when thresholds are met. This is a quality/outcome signal, not a customer-satisfaction survey and not a profitability metric. ([CMS Overall Hospital Quality Star Rating](https://data.cms.gov/provider-data/topics/hospitals/overall-hospital-quality-star-rating/))
+
+**Practical 20/20 data fields:** payer member satisfaction and retention; claims denial and appeal rates; medical-loss/medical-care ratio; provider access and appointment wait time; medication adherence and refill persistence; hospital readmissions, mortality and safety events; HCAHPS/patient-experience scores; CMS star ratings; complaint rates; net promoter/customer effort metrics; product availability and shortages; clinical-trial enrollment and time to approval; R&D intensity; patent/exclusivity expiry; gross margin, operating margin, free cash flow and return on invested capital.
+
+## Interpretation for the 20/20 data refinery
+
+Healthcare and pharmaceuticals merits high attention because it combines **large measurable spend, recurring demand, aging-related utilization, public/private reimbursement, and innovation-driven upside**. The strongest data candidates are likely to be managed-care platforms, innovative-pharma franchises, medical-device/diagnostic platforms, and life-science services. However, “financially lucrative” should be tested at the company and subsegment level: high revenue growth can coexist with low margins, poor patient experience, reimbursement cuts, product liability, clinical failure or a looming patent cliff.
+
+Use a two-axis screen: **economic quality** (growth, margins, cash conversion, capital returns, pricing/payer power) and **customer/clinical quality** (satisfaction, access, outcomes, safety, adherence and complaints). Keep measured rankings separate from analyst judgment; the sources above provide benchmarks and company-reported results, not a single authoritative sector league table.
+
+## Free public sources
+
+- CMS National Health Expenditure data and projections: https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet
+- FDA novel-drug approvals: https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2024
+- SEC filings and company results: https://www.sec.gov/Archives/edgar/data/731766/000073176625000022/a2024q4exhibit991.htm ; https://www.sec.gov/Archives/edgar/data/200406/000020040625000038/jnj-20241229.htm
+- Lilly investor results: https://investor.lilly.com/news-releases/news-release-details/lilly-reports-full-q4-2024-financial-results-and-provides-2025
+- J.D. Power commercial health-plan study: https://www.jdpower.com/business/press-releases/2025-us-commercial-member-health-plan-study/
+- ACSI healthcare benchmarks: https://theacsi.com/industries/health-care/
+- CMS hospital quality data: https://data.cms.gov/provider-data/topics/hospitals/overall-hospital-quality-star-rating/
+
+## Caveats
+
+- The report is sector-level and U.S.-centric where the best free government data are available; global company comparisons need currency, accounting and market-access normalization.
+- Company examples are candidates, not recommendations or a measured ranking.
+- Revenue and earnings figures are company-reported; non-GAAP figures, acquisitions, divestitures, one-time items and accounting policies can limit comparability.
+- FDA approvals measure regulatory novelty, not commercial success, clinical superiority or return on R&D investment.
+- Satisfaction studies are samples and benchmarks, not complete measures of safety, outcomes, affordability or shareholder returns.
+- CMS star ratings use available measures and thresholds and can change with methodology and reporting periods; compare like with like.

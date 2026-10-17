@@ -1,0 +1,74 @@
+# Transportation and logistics
+
+## Why the sector can be financially lucrative in the 2020s
+
+**Measured scale and essential demand.** The U.S. Bureau of Transportation Statistics (BTS) reports that trucking contributed **$621.4 billion to U.S. GDP in 2024**, including $246.1 billion from for-hire services and $375.4 billion from in-house trucking. BTS also reports **$10.08 trillion of public and private transportation fixed assets in 2024**, underscoring the sector’s scale and infrastructure intensity. Source: [BTS Freight Transportation & the Economy](https://data.bts.gov/stories/s/Freight-Transportation-the-Economy/6ix2-c8dn/).
+
+**E-commerce and omnichannel fulfillment.** The U.S. Bureau of Labor Statistics (BLS) says transportation and warehousing employed **6.6 million people in June 2024**, or 5% of private-sector employment. Warehousing and storage represented 27% of sector jobs, truck transportation 24%, and couriers and messengers 16%. BLS specifically links courier job gains during the 2020 shock to growth in online sales. Source: [BLS, Keeping America Moving](https://www.bls.gov/spotlight/2024/keeping-america-moving-employment-in-transportation-and-warehousing-industries/home.htm). The Census Bureau maintains the official [Quarterly Retail E-Commerce Sales series](https://www.census.gov/retail/ecommerce.html), a free leading indicator for parcel, fulfillment, last-mile, and warehouse demand.
+
+**Cross-border and supply-chain complexity.** BTS reports that U.S. freight flows with Canada and Mexico reached **$1.601 trillion in 2024**, up 1.8% from 2023 and 20.8% above 2021. Trucks moved $1.032 trillion, or 64.4%, and truck plus rail accounted for 77.1% of combined surface freight flows. Source: [BTS TransBorder Freight Annual Report 2024](https://www.bts.gov/newsroom/transborder-freight-annual-report-2024-0). This supports durable demand for trucking, intermodal, customs brokerage, warehousing, forwarding, and cross-border technology.
+
+**Outsourcing, automation, and recurring contracts.** Contract logistics providers can earn recurring revenue by operating warehouses, fulfillment, transportation management, and automation for customers rather than selling only spot capacity. GXO’s 2024 results are a useful measured example: revenue rose 20% to $11.7 billion, adjusted EBITDA rose to $815 million from $741 million, and the company reported more than $1 billion of new-business wins for the second consecutive year. GXO attributes structural tailwinds to outsourcing, automation, e-commerce, and supply-chain complexity. Source: [GXO 2024 results](https://investors.gxo.com/news-releases/news-release-details/gxo-reports-fourth-quarter-and-full-year-2024-results). These are company-reported figures, not an independent industry ranking.
+
+**Network density, pricing, and operating leverage.** Integrated parcel, freight, rail, port, airline, and warehouse networks can spread fixed sorting, terminal, aircraft, rail, fleet, and technology costs over more volume. BTS reports that from 1990 to 2024 average truck freight revenue per ton-mile rose 245.8%; it also reports that transportation prices increased across truck, rail, and air services from 2010 to 2025. These measures are nominal/price-related and do not prove margin expansion, but they demonstrate the sector’s ability to monetize capacity and specialized service. Source: [BTS Freight Transportation & the Economy](https://data.bts.gov/stories/s/Freight-Transportation-the-Economy/6ix2-c8dn/).
+
+**Evidence from leading operators.** UPS reported full-year 2024 revenue of $91.1 billion, operating profit of $8.5 billion, a 9.3% GAAP operating margin, $10.1 billion of operating cash flow, and $6.3 billion of adjusted free cash flow. Its Q4 2024 international segment generated a 20.7% operating margin, illustrating why cross-border and premium service can be more attractive than lower-yield domestic volume. Source: [UPS Q4 and full-year 2024 results](https://investors.ups.com/news-events/press-releases/detail/2135/ups-releases-4q-2024-earnings-and-provides-2025-guidance). J.B. Hunt remained profitable but shows the cycle: full-year 2024 revenue was $12.09 billion and operating income $831 million, both down year over year, while dedicated contract services reported approximately 90% customer retention. Source: [J.B. Hunt 2024 results](https://www.jbhunt.com/our-company/newsroom/2025/01/jbht-q4-2024-earnings-release).
+
+## Most relevant industries
+
+The following is a **research shortlist, not a measured ranking**. Selection reflects scale, 2020s demand drivers, recurring-revenue potential, network effects, and availability of free public data.
+
+1. **Parcel, express, and last-mile delivery** — FedEx, UPS, DHL, and national postal operators. Direct beneficiaries of e-commerce and time-sensitive healthcare/industrial shipments. Key economics: network density, service tiers, surcharges, and route productivity.
+2. **Contract logistics, warehousing, and fulfillment** — GXO, DHL Supply Chain, Kuehne+Nagel, and large 3PLs. Attractive where customers outsource operations and providers add automation, labor productivity, and multi-year contracts.
+3. **Truckload, less-than-truckload, dedicated trucking, and freight brokerage** — J.B. Hunt, Werner, Knight-Swift, Old Dominion, XPO, C.H. Robinson, and TFI International. Dedicated and asset-light brokerage models have different cyclicality and margin profiles; do not compare them without normalizing the model.
+4. **Rail freight and intermodal** — Union Pacific, CSX, Norfolk Southern, Canadian National, Canadian Pacific Kansas City, and intermodal specialists. Rail has high fixed costs, infrastructure barriers, and fuel/land efficiency, but is exposed to industrial cycles, labor negotiations, and service quality.
+5. **Ocean shipping, ports, and freight forwarding** — Maersk, Hapag-Lloyd, COSCO, DSV, Kuehne+Nagel, and port terminal operators. Global trade and supply-chain redesign are demand supports; container rates and earnings are highly cyclical and can be unusually volatile.
+6. **Air cargo and passenger aviation** — FedEx Express, UPS Airlines, Delta, United, Southwest, Alaska, and American. Air cargo serves high-value/time-critical freight; passenger aviation has strong demand but structurally thinner and more volatile margins due to fuel, labor, fleet, and disruption exposure.
+7. **Transportation infrastructure, equipment leasing, and logistics real estate** — Prologis, Ryder, JB Hunt equipment, truck leasing, ports, airports, and intermodal terminals. These are picks-and-shovels exposures to freight growth, though capital intensity and interest rates matter.
+8. **Logistics software, visibility, and automation** — supply-chain management, transportation-management, warehouse-management, robotics, and route-optimization vendors. This is a relevant enabling layer, but standalone public-company comparability is weaker because many products are embedded in larger logistics providers or technology firms.
+
+## Candidate leading companies
+
+These are **candidates for the 20/20 data refinery, not an invented ranking**. They span distinct business models and should be screened with separate peer groups.
+
+- **Parcel/express:** UPS, FedEx, DHL Group, Canada Post, and the U.S. Postal Service.
+- **Contract logistics/3PL:** GXO Logistics, DHL Supply Chain, Kuehne+Nagel, DSV, C.H. Robinson, and XPO.
+- **Truckload/intermodal/dedicated:** J.B. Hunt, Old Dominion Freight Line, Knight-Swift Transportation, TFI International, Werner Enterprises, and Schneider National.
+- **Rail:** Union Pacific, CSX, Norfolk Southern, Canadian National, and Canadian Pacific Kansas City.
+- **Ocean/forwarding:** A.P. Moller–Maersk, Hapag-Lloyd, DSV, and Kuehne+Nagel.
+- **Air/passenger transport:** Delta Air Lines, United Airlines, Southwest Airlines, Alaska Air Group, American Airlines, FedEx, and UPS.
+- **Infrastructure/equipment/real estate:** Prologis, Ryder System, airport/port operators, and leasing platforms.
+
+A practical initial screen should favor companies with disclosed segment margins, free cash flow, recurring or contracted revenue, service-quality data, manageable leverage, and evidence of pricing power. For asset-heavy modes, compare return on invested capital and normalized free cash flow rather than revenue growth alone.
+
+## Customer-quality and satisfaction signals
+
+**Parcel/shipping.** The ACSI Retail and Consumer Shipping Study 2023–2024 used **40,264 randomly selected customer interviews** conducted January–December 2023 and scores companies on a 0–100 scale. Overall consumer-shipping satisfaction was 77, its highest since 2019. FedEx led the measured companies at **80**, up 5% year over year; the study says customers perceived improvement from shipping options through delivery. USPS Express and Priority Mail scored 73 and lagged private carriers on delivery timeliness. Source: [ACSI Retail and Consumer Shipping Study 2023–2024](https://theacsi.com/wp-content/uploads/2024/01/24jan_retail-ship-study.pdf).
+
+**Airlines and passenger travel.** The ACSI Travel Study 2023–2024 used **16,352 customer interviews** from April 2023 to March 2024. Airline satisfaction reached 77, an all-time high in that study; Alaska led at 82, followed by American and Allegiant at 79, Southwest and Delta at 78, and United at 75. The study tracks practical quality attributes such as timeliness, baggage handling, check-in, app reliability, and crew courtesy. Source: [ACSI Travel Study 2023–2024](https://theacsi.com/wp-content/uploads/2024/04/24apr_travel-study.pdf).
+
+**Rail/passenger service.** The Federal Railroad Administration’s FY2024 Q4 Amtrak performance report tracks customer on-time performance, delays per 10,000 train miles, ridership, and route-level customer service index (CSI). It defines CSI as a market-research survey covering the customer journey and reports both the share rating overall satisfaction at 70 or higher and at 80 or higher. This is a useful public operating-quality framework, although Amtrak is not a directly comparable private freight peer. Source: [FRA/Amtrak FY2024 Q4 Performance and Service Quality Report](https://railroads.dot.gov/sites/fra.dot.gov/files/2024-12/FY24%20Q4%20Performance%20and%20Service%20Quality%20Report_PDFa.pdf).
+
+**Contract logistics customers.** GXO said its 2024 customer satisfaction scores were at an all-time high and that more than 40 existing customers expanded into new geographies. This is a **company-reported signal**, not an independent benchmark; it becomes more credible when triangulated with repeat wins, retention, contract renewals, organic growth, and customer concentration disclosures. Source: [GXO 2024 results](https://investors.gxo.com/news-releases/news-release-details/gxo-reports-fourth-quarter-and-full-year-2024-results). J.B. Hunt disclosed approximately 90% customer retention in Dedicated Contract Services in Q4 2024, also a company-reported metric. Source: [J.B. Hunt 2024 results](https://www.jbhunt.com/our-company/newsroom/2025/01/jbht-q4-2024-earnings-release).
+
+**Recommended customer-quality fields for the refinery:** ACSI or other independent satisfaction score; on-time delivery/arrival; claims, damage, and loss rates; complaint rate and resolution time; NPS or customer-retention rate; contract renewal and expansion; digital tracking/app reliability; billing accuracy; shipment visibility; safety incidents; and regulatory service metrics. Keep consumer scores separate from shipper scores because a parcel recipient, airline passenger, and industrial freight buyer evaluate different journeys.
+
+## Free public data sources and metrics
+
+- [BTS Freight Facts and Figures](https://data.bts.gov/stories/s/Freight-Transportation-the-Economy/6ix2-c8dn/): GDP by mode, freight TSI, fixed assets, employment, prices, revenue per ton-mile, productivity, and fuel prices.
+- [BTS TransBorder Freight Data](https://www.bts.gov/newsroom/transborder-freight-annual-report-2024-0): U.S.–Canada/Mexico flows by mode, commodity, port, and year.
+- [BLS transportation and warehousing spotlight](https://www.bls.gov/spotlight/2024/keeping-america-moving-employment-in-transportation-and-warehousing-industries/home.htm): employment, wages, occupation mix, injuries, and projections.
+- [Census Quarterly Retail E-Commerce Sales](https://www.census.gov/retail/ecommerce.html): e-commerce sales, share of retail, and time series for demand modeling.
+- [SEC EDGAR](https://www.sec.gov/edgar/search/): 10-K/10-Q revenue, segment profit, capex, free cash flow, customer concentration, risk factors, and operating metrics.
+- [ACSI shipping study](https://theacsi.com/wp-content/uploads/2024/01/24jan_retail-ship-study.pdf) and [ACSI travel study](https://theacsi.com/wp-content/uploads/2024/04/24apr_travel-study.pdf): independent customer-satisfaction benchmarks.
+- [FRA/Amtrak performance reports](https://railroads.dot.gov/rail-network-development/passenger-rail/amtrak-performance-reports): public on-time, delay, ridership, and CSI data.
+- Company investor-relations sources such as [UPS](https://investors.ups.com/), [FedEx](https://investors.fedex.com/), [J.B. Hunt](https://investor.jbhunt.com/), and [GXO](https://investors.gxo.com/) for reported revenue, margins, volumes, retention, wins, and cash flow.
+
+## Caveats
+
+- Transportation and logistics is a collection of very different businesses. Parcel, rail, trucking, ocean, aviation, warehousing, and logistics software should not be ranked on one unadjusted margin or growth measure.
+- Freight volumes and spot rates are cyclical. The 2024 J.B. Hunt results show that revenue and operating income can fall even while selected contract businesses retain customers.
+- Asset intensity, fuel, wages, insurance, interest rates, labor agreements, weather, geopolitics, port congestion, and regulation can overwhelm secular demand growth.
+- Some satisfaction and retention metrics are company-reported and may use nonstandard definitions. Independent ACSI scores are more comparable, but they primarily measure consumer-facing experiences rather than B2B shipper satisfaction.
+- UPS, GXO, and J.B. Hunt figures above are company disclosures. They demonstrate business economics and data availability, not proof that each company is the best investment or the sector’s highest-margin operator.
+- BTS measures economic contribution and freight value, not company profitability. Revenue-per-ton-mile increases are not equivalent to real margin growth after labor, fuel, capital, and other costs.

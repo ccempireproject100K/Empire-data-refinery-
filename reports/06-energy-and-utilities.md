@@ -1,0 +1,78 @@
+# Energy and utilities — 20/20 sector report
+
+## Bottom line
+
+**Energy and utilities is financially attractive in the 2020s because it combines essential, recurring demand with an unusually large, policy-supported capital cycle.** The strongest evidence is not a claim that every company is profitable: it is the combination of rising load, mandated grid replacement and expansion, clean-energy investment, and regulated or contracted revenue models. The opportunity is therefore strongest in selected subsectors—electric networks, generation and storage, gas infrastructure, and energy-services suppliers—rather than uniformly across all oil, gas, power, and utility businesses.
+
+The sector also has a built-in quality check: customer outcomes and reliability are measurable. They are mixed. ACSI reported 2023–24 energy-utility satisfaction of **75/100**, up 4%, while J.D. Power reported 2024 residential electric-utility satisfaction of **707/1,000**, down for a fourth consecutive year as the average monthly bill reached **$182**. This means investment and earnings growth do not automatically imply customer approval.
+
+## Why it can be lucrative in the 2020s
+
+1. **Electricity demand has re-accelerated.** The U.S. Energy Information Administration says consumption was broadly flat for almost two decades but, from 2020 through its 2026 forecast, expects average annual growth of **1.7%**; commercial demand is forecast to grow **2.6%** and industrial demand **2.1%** annually. EIA attributes much of the change to data centers and manufacturing ([EIA, “After more than a decade of little change, U.S. electricity consumption is rising again”](https://www.eia.gov/todayinenergy/detail.php?id=65264)).
+
+2. **Data centers and AI create a large new load pocket.** The U.S. Department of Energy/Lawrence Berkeley National Laboratory estimates data centers used **176 TWh**, or **4.4% of U.S. electricity**, in 2023; usage could reach **325–580 TWh** and **6.7–12%** of U.S. electricity by 2028 ([DOE, “New Report Evaluating Increase in Electricity Demand from Data Centers”](https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers)). This supports demand for generation, transmission, distribution upgrades, storage, efficiency, and onsite power. It also creates permitting, interconnection, affordability, and concentration risks.
+
+3. **A very large investment cycle is underway.** The IEA estimates global energy investment will exceed **$3 trillion in 2024**, with about **$2 trillion** for clean-energy technologies and infrastructure. It projects about **$400 billion** of grid investment and more than **$50 billion** of battery-storage investment in 2024. Solar-PV investment alone is projected above **$500 billion** ([IEA, *World Energy Investment 2024*](https://www.iea.org/reports/world-energy-investment-2024/overview-and-key-findings)). These are measured investment flows, not a guarantee of investor returns, but they identify a deep addressable market.
+
+4. **Regulated and contracted economics can make cash flows durable.** Regulated electric and gas utilities generally recover prudently incurred capital and operating costs through approved rates, subject to regulators and political affordability constraints. Independent power and renewable developers can secure long-term power-purchase agreements or capacity contracts. This revenue visibility is a judgment about business-model quality, not a ranking of companies; it must be tested against leverage, allowed returns, commodity exposure, execution, and regulatory decisions.
+
+5. **Technology and policy improve selected project economics.** The IEA reports that solar-panel costs fell **30% over the prior two years** to its 2024 publication and that investment in wind and solar produced 2.5 times more energy per invested dollar in 2023 than a decade earlier. Lower equipment costs, tax incentives, emissions policy, energy-security objectives, and industrial policy are tailwinds, though higher interest rates and curtailment can offset them.
+
+6. **Essential service demand is resilient, but profitability is cyclical by subindustry.** Electricity, gas distribution, fuels, and energy infrastructure are necessities. However, upstream oil and gas profits remain exposed to commodity prices, refining margins, depletion, geopolitics, and carbon policy; merchant power is exposed to weather, fuel spreads, and wholesale prices. “Energy and utilities” should therefore be screened by subsector rather than treated as one homogeneous investment.
+
+## Most relevant industries / subsectors
+
+- **Regulated electric utilities and transmission/distribution:** rate-base growth from grid hardening, electrification, reliability, and data-center interconnection; recurring customer revenue but significant regulatory and political risk.
+- **Renewable generation and battery storage:** wind, solar, storage, and hybrid projects supported by long-term contracts or market revenues; exposed to financing rates, supply chains, interconnection queues, and curtailment.
+- **Nuclear and firm low-carbon generation:** valuable for reliable capacity and data-center load; long construction timelines, outage/refueling risk, and regulatory complexity matter.
+- **Natural-gas utilities, pipelines, and flexible generation:** gas distribution has regulated characteristics; pipelines and gas-fired generation can benefit from reliability and balancing demand but face commodity, permitting, and transition risk.
+- **Oil and gas exploration, production, LNG, and refining:** potentially high cash generation during favorable price cycles, but less predictable than regulated networks and exposed to commodity and geopolitical volatility.
+- **Energy efficiency, electrification, grid equipment, and energy services:** suppliers of meters, transformers, controls, demand response, distributed energy, building efficiency, and industrial decarbonization; often benefit from capex growth without owning all commodity risk.
+- **Retail energy, charging, and distributed energy:** customer-facing growth areas with possible recurring software/service revenue, but competitive intensity, adoption, and unit economics vary widely.
+
+## Candidate leading companies (screening candidates, not a ranking)
+
+These are **candidates for further diligence**, selected by a combination of disclosed scale, strategic relevance to the subsectors above, asset position, and public reporting—not by an invented league table.
+
+- **NextEra Energy (NYSE: NEE):** its 2024 annual report describes about **72 GW** of net generation/storage capacity, more than **six million FPL customer accounts**, and a renewable/storage and transmission platform. Reported 2024 net income attributable to NEE was **$6.946 billion**, including **$4.543 billion** for FPL and **$2.299 billion** for NextEra Energy Resources ([2024 Annual Report](https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/investor-materials/shareholder-resources/2025/2024%20NEE%20Annual%20Report.pdf)). These are company-reported figures, not an independent ranking.
+- **Duke Energy (NYSE: DUK):** a major regulated electric and gas utility candidate for grid, generation, and reliability spending; review its [2024 Form 10-K/annual report](https://investors.duke-energy.com/financial-information/annual-reports-and-proxy-statements/default.aspx).
+- **Southern Company (NYSE: SO):** a major U.S. electric/gas utility with regulated networks and generation exposure; review its [SEC filings and annual reports](https://investor.southerncompany.com/financial-information/sec-filings/default.aspx).
+- **Constellation Energy (NASDAQ: CEG):** a focused nuclear and clean-firm-power candidate with potential relevance to reliability and large-load contracting; review its [2024 Form 10-K](https://investors.constellationenergy.com/financial-information/sec-filings/default.aspx).
+- **Enbridge (TSX/NYSE: ENB):** a North American gas-pipeline, gas-distribution, and liquids-infrastructure candidate with regulated/contracted characteristics; review its [annual reports](https://www.enbridge.com/investors/reports-and-filings/annual-reports).
+- **Brookfield Renewable (NYSE: BEP; TSX: BEP.UN):** a global renewable-power and storage owner/operator candidate; review its [annual reports](https://bep.brookfield.com/reports-and-filings/annual-reports).
+- **Schneider Electric (EPA: SU) and Eaton (NYSE: ETN):** grid equipment, electrification, power-management, and data-center infrastructure candidates that may capture capex growth as suppliers rather than regulated asset owners; review [Schneider financial information](https://www.se.com/ww/en/about-us/investor-relations/) and [Eaton annual reports](https://www.eaton.com/us/en-us/company/investor-relations/annual-reports.html).
+- **Exxon Mobil (NYSE: XOM), Chevron (NYSE: CVX), and Shell (LSE: SHEL/NYSE: SHEL):** diversified upstream, LNG, refining, and chemicals candidates for the commodity-exposed part of the sector; their economics should be assessed with price scenarios, not utility-style multiples. See [Exxon annual reports](https://corporate.exxonmobil.com/investors/annual-report), [Chevron annual reports](https://www.chevron.com/about/leadership/annual-report), and [Shell annual reports](https://www.shell.com/investors/financial-reporting/annual-publications.html).
+
+## Customer-quality and satisfaction signals
+
+- **ACSI (measured survey):** the 2023–24 energy-utilities score was **75/100**, up 4%. Cooperatives scored 78, municipal utilities 75, investor-owned utilities 74, and natural-gas utilities 76. Atmos Energy led the named company results at 80; Berkshire Hathaway Energy, Dominion, Duke, NextEra, and Southern each scored 77. The study covered **28,887** randomly selected residential customers ([ACSI Energy Utilities Study 2023–24](https://theacsi.com/news-and-resources/press-releases/2024/03/19/press-release-energy-utilities-study-2023-2024/)). These are survey results, not a financial ranking.
+- **J.D. Power (measured survey):** 2024 overall residential electric-utility satisfaction fell to **707/1,000** for a fourth consecutive annual decline. Billing/payment and customer-care scores each fell 11 points. The study reports an average monthly bill of $182 and says 39% of respondents felt financially worse off than in 2023. It surveyed **107,175** online interviews across 151 large utility brands ([J.D. Power 2024 U.S. Electric Utility Residential Customer Satisfaction Study](https://www.jdpower.com/business/press-releases/2024-us-electric-utility-residential-customer-satisfaction-study/)).
+- **Reliability metrics (operational quality):** EIA publishes SAIDI (minutes of interruption), SAIFI (interruptions), and CAIDI (minutes per interruption) by state and year. In its 2024 table, the U.S. total including major events was **611.3 SAIDI minutes**, **1.521 SAIFI**, and **401.9 CAIDI**; excluding major events it was **126.0 SAIDI**, **1.043 SAIFI**, and **120.8 CAIDI** ([EIA Electric Power Annual, Table 11.3](https://www.eia.gov/electricity/annual/table.php?t=epa_11_03.html)). State values vary substantially, so national figures should not be used to rank individual utilities.
+- **Company disclosures:** candidate companies disclose customer accounts, outage/restoration measures, reliability programs, rate affordability initiatives, and regulatory outcomes in annual reports. These are useful leading indicators but are self-reported and should be triangulated with EIA, state regulators, and independent surveys.
+
+## Free public data that can support a 20/20 screen
+
+- EIA electricity sales, prices, generation, capacity, utility financial and reliability data: [EIA Electricity Data](https://www.eia.gov/electricity/data.php).
+- EIA annual reliability: [Electric Power Annual](https://www.eia.gov/electricity/annual/).
+- DOE/LBNL data-center load study: [2024 Report on U.S. Data Center Energy Use](https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf).
+- IEA investment and technology economics: [World Energy Investment 2024](https://www.iea.org/reports/world-energy-investment-2024/overview-and-key-findings).
+- SEC company filings: [SEC EDGAR company search](https://www.sec.gov/edgar/searchedgar/companysearch).
+- Customer surveys: [ACSI Energy Utilities](https://theacsi.com/news-and-resources/press-releases/2024/03/19/press-release-energy-utilities-study-2023-2024/) and [J.D. Power utilities research](https://www.jdpower.com/business/utilities/).
+- Company annual reports and investor filings, linked above, for revenue, earnings, capital expenditure, debt, customer accounts, segment margins, backlog/contracting, and guidance.
+
+## Metrics available for comparison
+
+**Demand and scale:** electricity sales/TWh, peak load, customer accounts, connected load, generation capacity/MW, storage capacity/MWh, transmission/distribution miles, and interconnection queue.
+
+**Financial:** revenue, operating income, net income, EBITDA or company-defined adjusted EBITDA, free cash flow, capex, rate base, allowed ROE, debt/EBITDA, interest coverage, dividend coverage, reserve replacement, lifting/refining costs, realized commodity prices, contract duration, and backlog.
+
+**Quality and customer outcomes:** ACSI/J.D. Power scores, complaint rates, bill-payment measures, affordability/disconnection data, SAIDI, SAIFI, CAIDI, outage frequency/duration, restoration time, safety incidents, emissions intensity, and renewable availability/capacity factor.
+
+## Caveats
+
+- **No universal sector ranking is justified** by the sources above. “Leading” companies here means candidates for diligence based on scale and strategic fit; it is not a measured performance ranking.
+- Financial comparisons require subsector normalization. A regulated utility, an LNG producer, a nuclear generator, and a grid-equipment maker have different accounting, leverage, and cycle characteristics.
+- IEA 2024 investment figures include estimates; EIA forecasts are forecasts, not realized results. DOE’s 2028 data-center range is scenario-based.
+- Customer scores are U.S.-focused surveys and may not generalize globally. Reliability results are affected by weather and major events, and reported coverage varies by state.
+- Policy support, tax credits, rate cases, permits, transmission access, interest rates, commodity prices, and supply-chain availability can materially change project returns.
+- Higher investment does not necessarily mean higher shareholder returns: execution, financing cost, curtailment, regulatory disallowances, stranded-asset risk, and customer affordability remain central underwriting issues.
