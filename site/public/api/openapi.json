@@ -1,0 +1,233 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "20/20 Research API",
+    "version": "2026-10-15",
+    "description": "Read-only access to the 20/20 sector dataset, claim-level evidence graph, public sources, and AI Skills Archive. No credentials are returned."
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "API discovery",
+        "responses": {
+          "200": {
+            "description": "Available endpoints"
+          }
+        }
+      }
+    },
+    "/sectors": {
+      "get": {
+        "summary": "List sectors",
+        "responses": {
+          "200": {
+            "description": "Sector summaries"
+          }
+        }
+      }
+    },
+    "/sectors/{slug}": {
+      "get": {
+        "summary": "Get a sector dossier",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sector dossier with evidence trail"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/claims/{id}": {
+      "get": {
+        "summary": "Trace a claim",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Claim with related sources"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/sources": {
+      "get": {
+        "summary": "List public sources",
+        "responses": {
+          "200": {
+            "description": "Source records"
+          }
+        }
+      }
+    },
+    "/updates": {
+      "get": {
+        "summary": "Read the latest source update report",
+        "responses": {
+          "200": {
+            "description": "Auditable source-check status"
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "Search sectors, claims, sources, and skills",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results"
+          }
+        }
+      }
+    },
+    "/compare": {
+      "get": {
+        "summary": "Compare up to four sectors",
+        "parameters": [
+          {
+            "name": "slugs",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Comma-separated sector slugs"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Comparison matrix"
+          }
+        }
+      }
+    },
+    "/skills": {
+      "get": {
+        "summary": "List AI skills",
+        "responses": {
+          "200": {
+            "description": "Skills catalog"
+          }
+        }
+      }
+    },
+    "/skills/{slug}": {
+      "get": {
+        "summary": "Get an AI skill",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Skill record"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/catalog": {
+      "get": {
+        "summary": "List free public data sources and metric recipes",
+        "responses": {
+          "200": {
+            "description": "Official source catalog with access levels, endpoints, and caveats"
+          }
+        }
+      }
+    },
+    "/samples": {
+      "get": {
+        "summary": "Read bounded live samples from official public APIs",
+        "responses": {
+          "200": {
+            "description": "Sample status, provenance, and raw response shapes"
+          }
+        }
+      }
+    },
+    "/metrics": {
+      "get": {
+        "summary": "List normalized free-data metric recipes",
+        "responses": {
+          "200": {
+            "description": "Metric recipes with fields, grain, sources, and normalization rules"
+          }
+        }
+      }
+    },
+    "/companies": {
+      "get": {
+        "summary": "List candidate companies from sector dossiers",
+        "parameters": [
+          {
+            "name": "sector",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "string"}
+          }
+        ],
+        "responses": {
+          "200": {"description": "Company candidates with sector context"}
+        }
+      }
+    },
+    "/vintages": {
+      "get": {
+        "summary": "Read source review and freshness metadata",
+        "responses": {"200": {"description": "Source vintage and freshness records"}}
+      }
+    },
+    "/comparability": {
+      "get": {
+        "summary": "Read comparability warnings for normalized analysis",
+        "responses": {"200": {"description": "Currency, period, denominator, industry-code, and evidence warnings"}}
+      }
+    }
+  }
+}

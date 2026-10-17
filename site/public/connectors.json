@@ -1,0 +1,55 @@
+{
+  "name": "20/20 Connector Catalog",
+  "version": "2026-10-15",
+  "securityRule": "API keys are credentials, not skills. This archive stores credential names and connector requirements only; it never stores secret key values.",
+  "connectors": [
+    {
+      "slug": "web-search",
+      "name": "Web search",
+      "credentialName": "SEARCH_API_KEY",
+      "secretStored": false,
+      "access": "Read-only search or browser connector",
+      "notes": "Optional. Use a provider-specific server-side secret if a paid or authenticated search endpoint is selected."
+    },
+    {
+      "slug": "document-store",
+      "name": "Document store",
+      "credentialName": "DOCUMENT_STORE_TOKEN",
+      "secretStored": false,
+      "access": "Read-only document retrieval",
+      "notes": "Use scoped access to the selected archive; do not expose the token to client-side JavaScript."
+    },
+    {
+      "slug": "mcp-server",
+      "name": "MCP server",
+      "credentialName": "MCP_SERVER_TOKEN",
+      "secretStored": false,
+      "access": "Defined per MCP server and tool",
+      "notes": "Prefer separate credentials for read-only resources and mutating tools."
+    },
+    {
+      "slug": "secrets-vault",
+      "name": "Secrets vault",
+      "credentialName": "VAULT_REFERENCE",
+      "secretStored": false,
+      "access": "Runtime lookup by secret name",
+      "notes": "The archive should store only a vault reference and scope, never the secret value."
+    },
+    {
+      "slug": "audit-log",
+      "name": "Audit log",
+      "credentialName": "AUDIT_LOG_TOKEN",
+      "secretStored": false,
+      "access": "Append-only security and tool events",
+      "notes": "Mask credentials and personal data in logs."
+    },
+    {
+      "slug": "provider-api",
+      "name": "Provider API",
+      "credentialName": "PROVIDER_API_KEY",
+      "secretStored": false,
+      "access": "Provider-specific least-privilege scope",
+      "notes": "Use a restricted key, server-side storage, rotation, revocation, and request monitoring."
+    }
+  ]
+}
