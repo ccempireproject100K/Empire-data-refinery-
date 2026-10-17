@@ -285,3 +285,86 @@ Pricing at each gate is an owner decision (§8).
   graduation criterion is first met. Revisions are committed with their
   rationale recorded — the same discipline the project applies to data
   vintages.
+
+---
+
+## Appendix: Source expansion (verified 2026-10-16)
+
+This appendix extends two lists that already exist: the Tier A ingestion
+program (§2) gains the data sources below, and the Tier C harvest pool (§4)
+gains the skills sources. It adds candidates; it does not reorder Tier A or
+change any graduation criterion. Every access claim was checked against the
+cited documentation on **2026-10-16**. Access policies change without notice
+to us — four entries below differ from the assumptions current when this
+roadmap was drafted, and each is marked **[changed]**. Re-verify each source
+at ingestion time and record the check date in the dataset catalog, the same
+vintage discipline applied to data.
+
+### A. Data sources (extends Tier A)
+
+| Source | What it adds | Cost | Access | Owner action |
+|---|---|---|---|---|
+| BLS QCEW | Employment, wages, and establishment counts by NAICS × county/state/national — the sector scale proxies behind Tier B and the D1 labor lens | Free | Downloadable single-file ZIPs (annual/quarterly) with no key and no registration ([BLS QCEW downloadable data files](https://www.bls.gov/cew/downloadable-data-files.htm)). The BLS Public Data API also works keyless at reduced limits (25 queries/day); free registration raises it to 500/day ([BLS API FAQs](http://www.bls.gov/developers/api_faqs.htm)) | None |
+| SEC EDGAR — company facts (XBRL) + full-text search | Audited issuer financials as structured facts, plus searchable filing text — the raw material of Tier-3 scorecards (Tier B2) | Free | No API key. A declared `User-Agent` header is required and the fair-access ceiling is 10 requests/second ([SEC, Accessing EDGAR Data](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data)) | None |
+| FRED (Federal Reserve Bank of St. Louis) | Macro and industry time series; ALFRED vintages fit the non-overwritten time-series model (§2, A4) | Free | **API key required** — every request carries a registered key ("Users must register for their own API key with FRED," [FRED User Guide](https://www.federalreserve.gov/data/ddp-fred-user-guide.htm)) | **Signup:** free account + key at https://fredaccount.stlouisfed.org/apikeys |
+| Census Bureau APIs (ACS, County Business Patterns, economic series) | Demographic and establishment context for sector demand and the D3 trades deep-dive | Free | **[changed]** Keyless data queries no longer work: "All data queries to the Census Data API now require an API key" ([Census Bureau developer pages](https://www.census.gov/data/developers/data-sets/census-microdata-api.VIUS.html), revised October 2026). Bulk summary files remain direct downloads | **Signup:** free key at https://api.census.gov/data/key_signup.html |
+| World Bank Open Data API | Cross-country indicators — the honest basis for D2 regional cuts | Free (datasets generally CC BY 4.0) | No key, no registration ([World Bank Indicators API documentation](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392)) | None |
+| OECD API (SDMX) | Member-economy industry, productivity, and trade series | Free | Public SDMX REST endpoints (`sdmx.oecd.org/public/…`) with no key; use is subject to the OECD Terms and Conditions ([OECD Data API documentation](https://gitlab.algobank.oecd.org/public-documentation/dotstat-migration/-/raw/5c46813f1dc3d392cc6d513603005e8fab280c77/OECD_Data_API_documentation.pdf?inline=false)) | None |
+| Eurostat API | EU sector series for D2 regional cuts | Free | Statistics API (SDMX 3.0 / JSON-stat) with no key ([Eurostat, API — Getting started](https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started)) | None |
+| USAspending API | Federal contract and grant awards by agency, NAICS, and recipient — measured demand evidence for defense, health, and IT-services sectors | Free | No key, no account, no token (`https://api.usaspending.gov`) | None |
+| USPTO PatentsView | Patent counts, citations, and assignee/technology breakdowns — innovation signals for the O and G pillars | Free | **[changed]** The legacy PatentsView API was discontinued (2025) and its PatentSearch successor was paused at the March 2026 migration to the **USPTO Open Data Portal** (`api.uspto.gov`). Access is now an ODP API key sent as `X-API-KEY`; PatentsView bulk tables ship as ODP dataset products | **Signup (replaces the retired patentsview.org key request):** USPTO.gov account, then issue an ODP key via "Manage API Key" at https://data.uspto.gov |
+| OpenAlex | Scholarly works, authors, and institutions graph — research-output signals (biotech, AI, life sciences) | Free (underlying data CC0) | **[changed]** Since February 2026 the hosted API requires a **free API key** for production use, with a daily free allowance (roughly $1/day of usage; single-record lookups uncapped) ([OpenAlex authentication](https://developers.openalex.org/api-reference/authentication)). The full CC0 snapshot on S3 remains a keyless bulk download | **Signup (free, only for hosted-API use at scale):** key at https://openalex.org/settings/api |
+| data.gov Catalog API | Discovery layer over federal datasets — how new Tier A candidates are found, not itself an ingestion target | Free | **[changed in part]** The legacy CKAN read API remains available read-only without a key, but the current Catalog API v4 (`api.gsa.gov/technology/datagov/v4/`) is served through api.data.gov and requires a free key in the `X-Api-Key` header; `DEMO_KEY` works for exploration ([GSA, Catalog API](https://github.com/gsa/resources.data.gov/blob/HEAD/pages/catalog-api.md)) | **Signup (free, only for v4):** https://api.data.gov/signup |
+
+**Cite-only (paid).** Gartner, McKinsey, and IBISWorld remain what they have
+always been in this corpus: citation sources inside claims, labeled with
+their evidence type. They are never ingestion targets — no accounts, no
+scraping of gated material, no exceptions.
+
+### B. Skills sources (extends Tier C)
+
+The Tier C guardrails are unchanged: derived summaries only, provenance and
+license notes retained, no reproduced course text. The license basis below
+was verified from each source's own repository or publication on 2026-10-16;
+it decides whether a source may be *harvested* (derived summaries) or only
+*linked*.
+
+| Source | What it adds | License basis (verified) | Use |
+|---|---|---|---|
+| anthropics/courses | Anthropic's course material — prompt engineering, tool use, evaluations, MCP | **CC BY-NC 4.0** (repository LICENSE) | Harvest permitted with attribution for the **non-commercial** public archive. The NC clause conflicts with the §7 premium archive: NC-derived entries are excluded from any paid tier unless re-derived from a permissive source |
+| Anthropic documentation (platform.claude.com/docs) | Product and API guidance | **No open license** — documentation content is © Anthropic, all rights reserved; no derivative grant found | **Link-only.** Cite and link; do not harvest derived summaries from the docs site |
+| OpenAI Cookbook (openai/openai-cookbook) | Worked API patterns — structured outputs, evals, agents SDK usage | MIT (repository LICENSE) | Harvest permitted with attribution |
+| Microsoft — Generative AI for Beginners | Foundational LLM application curriculum | MIT (repository LICENSE) | Harvest permitted with attribution |
+| Microsoft — AI Agents for Beginners | Agent patterns curriculum (already a baseline Tier C source) | MIT (repository LICENSE) | Harvest permitted with attribution |
+| Hugging Face Agents Course (huggingface/agents-course) | Agent frameworks — smolagents, LangGraph, LlamaIndex (already a baseline Tier C source) | Apache-2.0 (repository LICENSE) | Harvest permitted with attribution and NOTICE retention |
+| LangChain Academy (langchain-ai/langchain-academy) | LangGraph agent engineering courses | MIT (repository LICENSE) | Harvest permitted with attribution |
+| Model Context Protocol (specification + docs) | The reference pattern behind the archive's `tool-use-and-mcp` skill and the Tier E2 wrapper | Project is mid-transition from MIT to Apache-2.0; documentation contributions are CC BY 4.0 (repository LICENSE) | Harvest permitted with attribution; record the license state at harvest date, since it is changing |
+| NIST AI RMF (AI 100-1; GenAI Profile AI 600-1) | Risk-management framework and playbook — governance skills | U.S. federal government work, not subject to U.S. copyright (17 U.S.C. §105); published free of charge by NIST | Harvest permitted; NIST cited as provenance |
+| OWASP Top 10 for LLM Applications (GenAI Security Project) | LLM security risk taxonomy — security skills | CC BY-SA 4.0 (project repository) | Harvest permitted with attribution; ShareAlike applies — adapted portions of derived entries carry CC BY-SA 4.0 |
+
+### C. Priority order and owner actions
+
+**Ingestion priority.** QCEW and EDGAR company-facts go first: both are
+keyless today, both feed measurements the framework currently lacks, and
+together they unlock Tier B scorecards (employment/scale structure from
+QCEW, audited financials from EDGAR). The keyed free sources follow as soon
+as their keys exist. Discovery and signal sources (data.gov, OpenAlex,
+USPTO, USAspending) come after the core series land; World Bank, OECD, and
+Eurostat arrive with the D2 regional work they exist to support.
+
+**Owner-action checklist — free key signups (all five verified 2026-10-16):**
+
+1. **FRED** — https://fredaccount.stlouisfed.org/apikeys (required for any API use)
+2. **Census Bureau** — https://api.census.gov/data/key_signup.html (now required for data queries)
+3. **USPTO Open Data Portal** — USPTO.gov account → "Manage API Key" at https://data.uspto.gov (replaces the retired PatentsView key request)
+4. **OpenAlex** — https://openalex.org/settings/api (only for hosted-API use at scale; the CC0 snapshot needs nothing)
+5. **api.data.gov** — https://api.data.gov/signup (only for Catalog API v4; legacy CKAN reads need nothing)
+
+Optional and owner-free: a BLS registration raises Public Data API limits,
+but QCEW files need nothing.
+
+**No action needed:** BLS QCEW (files), SEC EDGAR, World Bank, OECD,
+Eurostat, USAspending, and the OpenAlex CC0 snapshot. Creating these
+accounts and keys is an owner decision under §8, like every other credential
+in the project; keys are stored as credential *references*, never values
+(§4 guardrails).
