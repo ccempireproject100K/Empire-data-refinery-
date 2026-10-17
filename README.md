@@ -35,6 +35,32 @@ metrics are worth capturing about it going forward?
 | 19 | Professional services and education | [reports/19-professional-services-and-education.md](reports/19-professional-services-and-education.md) |
 | 20 | Travel, hospitality and experiences | [reports/20-travel-hospitality-and-experiences.md](reports/20-travel-hospitality-and-experiences.md) |
 
+## Synthesis layer
+
+On top of the 20 briefs sits one synthesis report:
+**[synthesis/20-20-sector-research-synthesis.md](synthesis/20-20-sector-research-synthesis.md)**.
+
+It turns the sector briefs into a repeatable, evidence-aware **screening
+framework** rather than treating them as standalone reads:
+
+- **Five-pillar score** — a proposed scoring methodology (with comparability
+  rules: sectors are split into economic sub-industries first, and companies
+  are scored only against close operating peers).
+- **Provisional ranked top-20** — a research-priority ranking of the 20
+  sectors indicating where a normalized diligence process should begin;
+  explicitly provisional and **not** an audited league table or investment
+  advice.
+- **Universe map** — the top industries and candidate companies per sector,
+  kept separate from the sector-priority ranking.
+- **Free-source data plan** — a collection architecture, minimum data
+  dictionary, metric formulas and guardrails, data-quality controls, update
+  cadence, and a directory of free primary sources.
+- **Evidence labeling standard** (Appendix A) — measured facts, forecasts,
+  estimates, and issuer-defined metrics carry different evidentiary weight and
+  are labeled accordingly throughout.
+- **A recommended 90-day program** for turning the framework into a
+  standardized, reproducible data set.
+
 ## Corpus conventions
 
 These conventions are observed consistently across the reports and should be
