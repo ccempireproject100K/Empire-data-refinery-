@@ -261,7 +261,164 @@ skills.extend([
 
 
 
-skills = list({item['slug']: item for item in skills}.values())[:20]
+skills.extend([
+    {
+        'slug': 'agent-workflow-patterns', 'name': 'Agent Workflow Patterns', 'level': 'Intermediate', 'category': 'Agent architecture',
+        'summary': 'Choose and compose predefined workflow patterns — chaining, routing, parallelization, orchestrator-workers, and evaluator-optimizer — before reaching for a fully autonomous agent.',
+        'uses': ['Use when a task decomposes into predictable steps that code can orchestrate.', 'Use when deciding between a workflow and an autonomous agent.', 'Use when a prototype agent is unreliable and needs more deterministic structure.'],
+        'capabilities': ['Pattern selection', 'Prompt chaining with gates', 'Input routing', 'Parallel sectioning and voting', 'Evaluator-optimizer loops'],
+        'workflow': ['Start with a single augmented model call and add structure only when it measurably helps.', 'Map the task to a pattern: fixed sequence, category routing, independent sections, dynamic decomposition, or a critique loop.', 'Put programmatic checks between chained steps so errors stop early.', 'Give the orchestrator a bounded task list and require a synthesis step.', 'Cap evaluator loops and record the best artifact and its rationale.', 'Promote a workflow to an autonomous agent only when the path cannot be specified in advance.'],
+        'sources': [{'title': 'LangChain Academy — Introduction to LangGraph', 'url': 'https://github.com/langchain-ai/langchain-academy', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}, {'title': 'Anthropic courses repository — Tool use course', 'url': 'https://github.com/anthropics/courses', 'license': 'CC BY-NC 4.0 — derived summaries permitted for this free archive; non-commercial only, so this entry is excluded from any future paid tier.'}],
+        'archiveNote': 'Derived pattern summary written for this archive from the linked public course material; the pattern names are a widely used taxonomy, not quoted text.', 'connectors': []
+    },
+    {
+        'slug': 'prompt-evaluation-pipelines', 'name': 'Prompt Evaluation Pipelines', 'level': 'Intermediate', 'category': 'Quality and governance',
+        'summary': 'Build repeatable evaluation sets and graders that score prompt quality before and after changes reach production.',
+        'uses': ['Use when changing a production prompt, model, or template.', 'Use when prompt quality is currently judged by anecdote.', 'Use when a team needs a shared quality bar across many prompts.'],
+        'capabilities': ['Eval set design', 'Grader selection', 'Human review sampling', 'Regression comparison', 'Failure clustering'],
+        'workflow': ['Collect representative inputs, including edge cases and known failures.', 'Define what a good output looks like with a rubric or reference answers.', 'Choose graders: exact checks, model-based scoring, human review, or a mix.', 'Run candidate and baseline prompts on the same frozen set.', 'Cluster failures by cause and fix the largest cluster first.', 'Freeze the set and re-run it on every prompt or model change.'],
+        'sources': [{'title': 'Anthropic courses repository — Prompt evaluations course', 'url': 'https://github.com/anthropics/courses', 'license': 'CC BY-NC 4.0 — derived summaries permitted for this free archive; non-commercial only, so this entry is excluded from any future paid tier.'}, {'title': 'Hugging Face AI Agents Course', 'url': 'https://huggingface.co/learn/agents-course/unit0/introduction', 'license': 'Apache-2.0 course repository; use a derived summary rather than copying lesson text.'}],
+        'archiveNote': 'Derived from public course concepts; grader prompts and datasets from sources are not reproduced.', 'connectors': ['audit-log']
+    },
+    {
+        'slug': 'multimodal-prompting', 'name': 'Multimodal Prompting', 'level': 'Beginner', 'category': 'Model literacy',
+        'summary': 'Give models images and documents as evidence, structure what they should look for, and verify visual claims before acting on them.',
+        'uses': ['Use when a task involves screenshots, scans, photos, charts, or PDFs.', 'Use when extracting structured facts from visual material.', 'Use when a text-only prompt keeps missing information that is visible.'],
+        'capabilities': ['Image grounding', 'Document triage', 'Visual question design', 'Cross-checking claims', 'Uncertainty reporting'],
+        'workflow': ['State what the model must find, decide, or extract from the visual input.', 'Order and label multiple images or pages so references stay unambiguous.', 'Ask for observations first and conclusions second.', 'Require the model to point to the visual evidence behind each claim.', 'Verify critical values against the source document or a second pass.', 'Record low-confidence readings for human review instead of guessing.'],
+        'sources': [{'title': 'Anthropic courses repository — API fundamentals', 'url': 'https://github.com/anthropics/courses', 'license': 'CC BY-NC 4.0 — derived summaries permitted for this free archive; non-commercial only, so this entry is excluded from any future paid tier.'}, {'title': 'Microsoft Generative AI for Beginners', 'url': 'https://github.com/microsoft/generative-ai-for-beginners', 'license': 'MIT-licensed Microsoft course repository; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived summary of public course concepts; no course exercises are reproduced.', 'connectors': ['document-store']
+    },
+    {
+        'slug': 'openai-agents-sdk', 'name': 'OpenAI Agents SDK Orientation', 'level': 'Intermediate', 'category': 'Frameworks',
+        'summary': 'Build agents from a small set of primitives — agents, tools, handoffs, guardrails, sessions, and built-in tracing.',
+        'uses': ['Use when standardizing on the OpenAI Agents SDK for a Python or TypeScript service.', 'Use when a prototype built on raw API calls needs structure without a heavy framework.', 'Use when handoffs between specialist agents are the main design problem.'],
+        'capabilities': ['Agent configuration', 'Function tools', 'Handoffs and agents-as-tools', 'Input and output guardrails', 'Trace review'],
+        'workflow': ['Define each agent with one responsibility, its instructions, and its tools.', 'Model delegation explicitly: handoffs for full transfer, agents-as-tools for bounded subtasks.', 'Add input and output guardrails that run alongside the agent loop.', 'Attach a session store when conversations must persist across runs.', 'Run representative tasks and inspect traces before tuning prompts.', 'Keep a raw-API fallback path for steps the SDK abstracts awkwardly.'],
+        'sources': [{'title': 'OpenAI Agents SDK documentation', 'url': 'https://openai.github.io/openai-agents-python/', 'license': 'Official OpenAI documentation for an MIT-licensed SDK; retain source links.'}, {'title': 'OpenAI Cookbook', 'url': 'https://github.com/openai/openai-cookbook', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived orientation summary; SDK APIs change quickly, so verify against the linked documentation.', 'connectors': ['provider-api', 'audit-log']
+    },
+    {
+        'slug': 'structured-data-extraction', 'name': 'Structured Data Extraction', 'level': 'Intermediate', 'category': 'Data workflows',
+        'summary': 'Turn unstructured text and documents into validated records using explicit schemas, constrained outputs, and repair loops.',
+        'uses': ['Use when converting emails, invoices, forms, or articles into database records.', 'Use when downstream software needs dependable fields, not prose.', 'Use when manual data entry from documents is the bottleneck.'],
+        'capabilities': ['Schema design', 'Constrained generation', 'Field validation', 'Repair and retry', 'Extraction evaluation'],
+        'workflow': ['Define the record schema with types, required fields, and allowed values.', 'Split long documents so each extraction call sees one coherent unit.', 'Request schema-conformant output and validate it programmatically.', 'On validation failure, return the specific errors to the model for one bounded repair attempt.', 'Measure field-level accuracy on a labeled sample before scaling.', 'Route low-confidence records to human review with the source text attached.'],
+        'sources': [{'title': 'OpenAI Cookbook', 'url': 'https://github.com/openai/openai-cookbook', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived workflow; example schemas from sources are not reproduced.', 'connectors': ['document-store', 'provider-api']
+    },
+    {
+        'slug': 'realtime-voice-agents', 'name': 'Realtime Voice Agents', 'level': 'Advanced', 'category': 'Realtime systems',
+        'summary': 'Build speech-to-speech agents that manage turns, interruptions, tool calls, and guardrails within a live audio session.',
+        'uses': ['Use when an agent must hold a spoken conversation with low latency.', 'Use when phone or in-app voice is the primary interface.', 'Use when text chat prototypes need a voice counterpart with the same tools.'],
+        'capabilities': ['Session design', 'Turn and interruption handling', 'Voice tool calling', 'Streaming guardrails', 'Latency budgeting'],
+        'workflow': ['Define the session contract: voice, turn-taking behavior, and when the agent may interrupt or be interrupted.', 'Reuse the same tool definitions as the text agent so behavior stays consistent.', 'Stream partial transcripts and tool results so the conversation never stalls silently.', 'Apply guardrails to both the user audio transcript and the agent responses.', 'Budget latency per stage and degrade gracefully to shorter replies under load.', 'Log transcripts, tool calls, and interruptions for quality review with secrets and personal data masked.'],
+        'sources': [{'title': 'OpenAI Agents SDK documentation — realtime agents', 'url': 'https://openai.github.io/openai-agents-python/', 'license': 'Official OpenAI documentation for an MIT-licensed SDK; retain source links.'}, {'title': 'OpenAI Cookbook', 'url': 'https://github.com/openai/openai-cookbook', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived design summary; test with real speakers and noisy audio before relying on lab results.', 'connectors': ['provider-api', 'audit-log']
+    },
+    {
+        'slug': 'llm-fine-tuning-workflows', 'name': 'LLM Fine-Tuning Workflows', 'level': 'Intermediate', 'category': 'Machine learning',
+        'summary': 'Adapt a model to a narrow task with curated examples, a held-out evaluation, and a rollback plan, instead of tuning on intuition.',
+        'uses': ['Use when prompting plateaus on a stable, well-defined task.', 'Use when a smaller tuned model could replace a larger prompted one.', 'Use when consistent formatting or classification behavior matters more than generality.'],
+        'capabilities': ['Dataset curation', 'Train/validation splits', 'Run configuration', 'Comparative evaluation', 'Deployment gating'],
+        'workflow': ['Confirm the task is stable and that prompt and retrieval fixes are exhausted.', 'Curate examples from real failures and successes; remove duplicates and label noise.', 'Hold out an evaluation set the tuning data never touches.', 'Run the smallest training configuration that can show signal.', 'Compare tuned and base models on the held-out set and on cost and latency.', 'Ship behind a gate with monitoring and a one-step rollback to the base model.'],
+        'sources': [{'title': 'OpenAI Cookbook', 'url': 'https://github.com/openai/openai-cookbook', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}, {'title': 'Hugging Face AI Agents Course — fine-tuning for function calling', 'url': 'https://huggingface.co/learn/agents-course/unit0/introduction', 'license': 'Apache-2.0 course repository; use a derived summary rather than copying lesson text.'}],
+        'archiveNote': 'Derived workflow; it includes no training data or hyperparameters from any source course.', 'connectors': ['provider-api']
+    },
+    {
+        'slug': 'generative-media-generation', 'name': 'Generative Media Generation', 'level': 'Beginner', 'category': 'Generative media',
+        'summary': 'Create and edit images with generative models inside an application while handling prompts, safety, and asset provenance deliberately.',
+        'uses': ['Use when an app needs illustrations, mockups, or visual variants.', 'Use when editing or extending existing images with a model.', 'Use when generating media at a scale manual design cannot cover.'],
+        'capabilities': ['Visual prompt design', 'Image editing workflows', 'Style consistency', 'Safety and rights checks', 'Asset cataloging'],
+        'workflow': ['Define the asset: subject, style, dimensions, and where it will be used.', 'Write prompts that specify composition and exclusions, not just subject keywords.', 'Generate variants and select against the brief rather than the first output.', 'Check outputs for artifacts, text errors, likeness, and rights problems.', 'Store the prompt, model, and generation settings with the final asset for reproducibility.', 'Label AI-generated assets where users or regulators expect disclosure.'],
+        'sources': [{'title': 'Microsoft Generative AI for Beginners', 'url': 'https://github.com/microsoft/generative-ai-for-beginners', 'license': 'MIT-licensed Microsoft course repository; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived summary of public course concepts; no course images or prompts are reproduced.', 'connectors': ['provider-api']
+    },
+    {
+        'slug': 'small-language-models', 'name': 'Small Language Models', 'level': 'Intermediate', 'category': 'Runtime choices',
+        'summary': 'Choose and run small language models for cost, latency, privacy, or offline needs, and verify they are good enough for the assigned task.',
+        'uses': ['Use when a frontier model is overkill for classification, extraction, or drafting.', 'Use when inference must run on-device or inside a private network.', 'Use when per-request cost or latency dominates the design.'],
+        'capabilities': ['Task-fit assessment', 'Model comparison', 'Local runtime setup', 'Quality spot-checking', 'Escalation routing'],
+        'workflow': ['Define the narrow task and the minimum acceptable quality.', 'Benchmark two or three candidate small models on real examples, not vendor demos.', 'Set up the local or hosted runtime with pinned versions and resource limits.', 'Add a router that escalates hard or low-confidence cases to a larger model.', 'Monitor quality drift as inputs change and re-benchmark on a schedule.', 'Document which tasks the small model owns and which it must never take.'],
+        'sources': [{'title': 'Microsoft Generative AI for Beginners', 'url': 'https://github.com/microsoft/generative-ai-for-beginners', 'license': 'MIT-licensed Microsoft course repository; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived summary; benchmark figures from any single course should be re-measured on your own workload.', 'connectors': []
+    },
+    {
+        'slug': 'smolagents-code-agents', 'name': 'smolagents Code Agents', 'level': 'Intermediate', 'category': 'Frameworks',
+        'summary': 'Build lightweight agents whose actions are Python code, with sandboxed execution, composable tools, and managed sub-agents.',
+        'uses': ['Use when an agent benefits from loops, variables, and combined tool calls in one step.', 'Use when a minimal, readable framework is preferable to a large platform.', 'Use when experimenting with code-writing agents before committing to a stack.'],
+        'capabilities': ['CodeAgent configuration', 'Tool authoring', 'Sandbox selection', 'Managed agents', 'Run inspection'],
+        'workflow': ['Pick CodeAgent for code actions or ToolCallingAgent for native JSON tool calls.', 'Register tools with precise docstrings; the model reads them as its manual.', 'Choose a real sandbox for generated code; the built-in local executor is not a security boundary.', 'Limit authorized imports and steps, and enable planning intervals for long tasks.', 'Add managed agents for specialized subtasks instead of growing one prompt.', 'Inspect runs with traces to find wasted steps and failing tools.'],
+        'sources': [{'title': 'smolagents documentation — inspecting runs', 'url': 'https://huggingface.co/docs/smolagents/en/tutorials/inspect_runs', 'license': 'smolagents is Apache-2.0 open source; this summary is derived, not copied.'}, {'title': 'Hugging Face AI Agents Course — smolagents unit', 'url': 'https://github.com/huggingface/agents-course/blob/HEAD/units/en/unit2/smolagents/tool_calling_agents.mdx', 'license': 'Apache-2.0 course repository; use a derived summary rather than copying lesson text.'}],
+        'archiveNote': 'Derived orientation summary. Never run generated code outside a sandbox you control.', 'connectors': ['provider-api']
+    },
+    {
+        'slug': 'llamaindex-data-agents', 'name': 'LlamaIndex Data Agents', 'level': 'Intermediate', 'category': 'Frameworks',
+        'summary': 'Build agents over private data with LlamaIndex indexing, query tools, and workflow events that keep retrieval auditable.',
+        'uses': ['Use when an agent must answer and act over a document collection.', 'Use when retrieval quality, not the chat loop, is the hard part.', 'Use when a RAG prototype needs tool use and multi-step workflows.'],
+        'capabilities': ['Index design', 'Query engines as tools', 'Workflow events', 'Retrieval evaluation', 'Source attribution'],
+        'workflow': ['Inventory the corpus and decide chunking, metadata, and refresh cadence.', 'Build indexes per collection so permissions and provenance stay separable.', 'Expose query engines as named tools with narrow descriptions.', 'Compose multi-step behavior as explicit workflow events rather than hidden chains.', 'Evaluate retrieval separately from answer quality so failures are attributable.', 'Attach source references to every answer the agent produces.'],
+        'sources': [{'title': 'Hugging Face AI Agents Course — frameworks unit (LlamaIndex)', 'url': 'https://huggingface.co/learn/agents-course/unit0/introduction', 'license': 'Apache-2.0 course repository; use a derived summary rather than copying lesson text.'}],
+        'archiveNote': 'Derived orientation summary; verify current LlamaIndex APIs against the project documentation before building.', 'connectors': ['document-store', 'web-search']
+    },
+    {
+        'slug': 'langgraph-stateful-agents', 'name': 'LangGraph Stateful Agents', 'level': 'Intermediate', 'category': 'Frameworks',
+        'summary': 'Model an agent as an explicit graph of nodes and edges over shared state, with checkpointing that makes runs resumable and inspectable.',
+        'uses': ['Use when agent behavior needs explicit control flow instead of a free-running loop.', 'Use when runs must pause, resume, or be replayed for debugging.', 'Use when multiple agents and tools share one evolving state.'],
+        'capabilities': ['State schema design', 'Nodes and conditional edges', 'Checkpointers and threads', 'Subgraphs', 'State inspection'],
+        'workflow': ['Define the state schema first: what accumulates, what gets overwritten, and what stays private to a node.', 'Implement nodes as small functions that return state updates rather than mutating shared state.', 'Wire conditional edges for tool calls, retries, and termination, with a recursion limit.', 'Compile with a checkpointer and a thread id per conversation or task.', 'Inspect saved state at failure points before changing prompts.', 'Promote the checkpointer from in-memory to a durable store for production.'],
+        'sources': [{'title': 'LangChain Academy — Introduction to LangGraph', 'url': 'https://github.com/langchain-ai/langchain-academy', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}, {'title': 'LangGraph concepts — human-in-the-loop and persistence', 'url': 'https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/', 'license': 'LangChain documentation; retain source links and verify current terms.'}],
+        'archiveNote': 'Derived orientation summary based on public course and documentation concepts.', 'connectors': ['audit-log']
+    },
+    {
+        'slug': 'human-in-the-loop-agents', 'name': 'Human-in-the-Loop Agents', 'level': 'Advanced', 'category': 'Agent architecture',
+        'summary': 'Pause agent execution at consequential moments so a person can approve, edit, or reject the next action, then resume from saved state.',
+        'uses': ['Use before an agent sends, pays, deletes, publishes, or changes records.', 'Use when full automation is possible but not yet trusted.', 'Use when regulations or policy require a human decision in the loop.'],
+        'capabilities': ['Interrupt design', 'Approval payloads', 'Edit-and-resume flows', 'Timeout and expiry policy', 'Decision audit trails'],
+        'workflow': ['Classify actions by reversibility and blast radius; only consequential ones interrupt.', 'Persist full state at the interrupt so the run can wait indefinitely.', 'Present the reviewer a compact payload: intent, inputs, expected effect, and alternatives.', 'Support approve, edit, and reject as distinct resume values, not a single yes/no.', 'Expire stale approvals and re-validate state before executing an approved action.', 'Log who decided, what changed, and how long review took.'],
+        'sources': [{'title': 'LangGraph concepts — human-in-the-loop', 'url': 'https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/', 'license': 'LangChain documentation; retain source links and verify current terms.'}, {'title': 'LangChain Academy — Introduction to LangGraph', 'url': 'https://github.com/langchain-ai/langchain-academy', 'license': 'MIT License; verify the LICENSE file for copied code or text.'}],
+        'archiveNote': 'Derived pattern summary. Human review only helps if reviewers get real context and enough time.', 'connectors': ['audit-log']
+    },
+    {
+        'slug': 'mcp-server-development', 'name': 'MCP Server Development', 'level': 'Intermediate', 'category': 'Agent infrastructure',
+        'summary': 'Implement a Model Context Protocol server that exposes tools, resources, and prompts with validated inputs and a deliberately chosen transport.',
+        'uses': ['Use when wrapping an internal system for use by multiple AI clients.', 'Use when a tool integration should outlive any single agent framework.', 'Use when exposing read-only data separately from mutating actions.'],
+        'capabilities': ['Server scaffolding', 'Tool and resource handlers', 'Transport selection', 'Input validation', 'Inspector testing'],
+        'workflow': ['Inventory the capabilities and split them into tools (actions), resources (data), and prompts (templates).', 'Define schemas for every input and output before writing handlers.', 'Implement handlers with least-privilege credentials held server-side.', 'Choose stdio for local clients or streamable HTTP for shared deployment, and configure authentication accordingly.', 'Test with the MCP Inspector and at least one real client before release.', 'Version the server and log calls without recording secret values.'],
+        'sources': [{'title': 'Model Context Protocol introduction', 'url': 'https://modelcontextprotocol.io/introduction', 'license': 'MCP documentation published under CC BY 4.0 (specification repository transitioning from MIT to Apache-2.0); retain attribution.'}],
+        'archiveNote': 'Derived build checklist. The protocol evolves through dated revisions; pin the revision you implement.', 'connectors': ['mcp-server', 'secrets-vault']
+    },
+    {
+        'slug': 'mcp-security-practices', 'name': 'MCP Security Practices', 'level': 'Advanced', 'category': 'Security and governance',
+        'summary': 'Deploy MCP clients and servers without confused-deputy, token-passthrough, and consent failures that turn a tool protocol into a privilege-escalation path.',
+        'uses': ['Use when an MCP server can act with a user or service authority.', 'Use when adding OAuth or remote servers to an agent product.', 'Use when reviewing a third-party MCP server before connecting it.'],
+        'capabilities': ['Consent design', 'Token audience validation', 'Session security', 'Tool description review', 'Server allowlisting'],
+        'workflow': ['Require explicit, per-server user consent before an agent gains new tools.', 'Bind tokens to the server audience; never pass a token through to downstream APIs.', 'Treat tool descriptions and server metadata as untrusted input that can change between sessions.', 'Pin session identifiers to the authenticated user and protect them like credentials.', 'Allowlist servers for sensitive environments and re-review them on update.', 'Log authorization decisions and provide a one-action disconnect for every server.'],
+        'sources': [{'title': 'Model Context Protocol introduction and security guidance', 'url': 'https://modelcontextprotocol.io/introduction', 'license': 'MCP documentation published under CC BY 4.0 (specification repository transitioning from MIT to Apache-2.0); retain attribution.'}, {'title': 'OWASP Secrets Management Cheat Sheet', 'url': 'https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html', 'license': 'OWASP guidance; retain attribution and verify current terms.'}],
+        'archiveNote': 'Derived from public protocol security guidance; re-check the current MCP specification before each deployment.', 'connectors': ['mcp-server', 'secrets-vault', 'audit-log']
+    },
+    {
+        'slug': 'ai-risk-management-framework', 'name': 'AI Risk Management Framework', 'level': 'Intermediate', 'category': 'Quality and governance',
+        'summary': 'Run AI risk as a continuous loop — Govern, Map, Measure, Manage — with named owners, a system inventory, and evidence for each decision.',
+        'uses': ['Use when an organization needs one shared method for AI risk across teams.', 'Use when agents move from experiments into systems people depend on.', 'Use when customers or regulators ask how AI risk is managed.'],
+        'capabilities': ['Governance and ownership', 'System inventory and context mapping', 'Risk measurement plans', 'Treatment and incident response', 'Trustworthiness review'],
+        'workflow': ['Govern: name accountable owners, set risk tolerance, and define approval gates.', 'Map: inventory each AI system with its purpose, data, users, and foreseeable misuse.', 'Measure: test performance, bias, robustness, security, and privacy against the mapped risks.', 'Manage: prioritize treatments, document accepted residual risk, and prepare incident response.', 'Apply the generative AI profile where models create content or act autonomously.', 'Repeat on a cadence and after every material change; the loop does not finish.'],
+        'sources': [{'title': 'NIST AI Risk Management Framework', 'url': 'https://www.nist.gov/itl/ai-risk-management-framework', 'license': 'Public domain — U.S. federal government publication; the framework is free for voluntary use.'}, {'title': 'NIST AI 100-1 — AI RMF 1.0 publication', 'url': 'https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10', 'license': 'NIST publication page; NIST-authored content is a U.S. government work (public domain).'}],
+        'archiveNote': 'Derived operational summary of a voluntary framework; it is not legal or compliance advice.', 'connectors': ['audit-log']
+    },
+    {
+        'slug': 'llm-threat-controls', 'name': 'LLM Threat Controls', 'level': 'Advanced', 'category': 'Security and governance',
+        'summary': 'Defend an LLM application against the OWASP Top 10 risks — prompt injection, sensitive disclosure, excessive agency, unsafe outputs, and unbounded consumption — with layered controls.',
+        'uses': ['Use when threat-modeling a chatbot, RAG system, or agent before launch.', 'Use when a security review needs a shared vocabulary for LLM-specific risks.', 'Use when an incident suggests model behavior, not code, was the attack path.'],
+        'capabilities': ['Threat enumeration', 'Injection defenses', 'Output handling controls', 'Agency limits', 'Consumption budgets'],
+        'workflow': ['Walk the current OWASP LLM Top 10 and mark which risks the system actually exposes.', 'Treat all retrieved and tool-returned text as untrusted data, never as instructions.', 'Validate and encode model output before it reaches browsers, shells, databases, or APIs.', 'Bound agency: least-privilege tools, human approval for irreversible actions, and per-task scopes.', 'Set token, cost, and rate budgets with alerts so consumption attacks surface early.', 'Re-run the review after model, prompt, tool, or data changes and record residual risks.'],
+        'sources': [{'title': 'OWASP Top 10 for LLM Applications', 'url': 'https://genai.owasp.org/llm-top-10/', 'license': 'OWASP GenAI Security Project guidance (CC BY-SA 4.0, share-alike); retain attribution and verify the current edition.'}, {'title': 'OWASP Secrets Management Cheat Sheet', 'url': 'https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html', 'license': 'OWASP guidance; retain attribution and verify current terms.'}],
+        'archiveNote': 'Derived control checklist. Rankings change between editions; cite the edition you assessed against.', 'connectors': ['audit-log', 'secrets-vault']
+    },
+])
+
+
+skills = list({item['slug']: item for item in skills}.values())
 
 connectors = [
     {'slug': 'web-search', 'name': 'Web search', 'credentialName': 'SEARCH_API_KEY', 'secretStored': False, 'access': 'Read-only search or browser connector', 'notes': 'Optional. Use a provider-specific server-side secret if a paid or authenticated search endpoint is selected.'},
@@ -274,13 +431,13 @@ connectors = [
 
 catalog = {
     'name': '20/20 AI Skills Archive',
-    'version': '2026-10-15',
+    'version': '2026-10-16',
     'description': 'Curated derived skills from free public courses and documentation. Source links and license notes are preserved; source course text is not copied wholesale.',
     'securityRule': 'API keys are credentials, not skills. This archive stores credential names and connector requirements only; it never stores secret key values.',
     'skills': skills,
 }
 (PUBLIC / 'skills.json').write_text(json.dumps(catalog, indent=2, ensure_ascii=False))
-(PUBLIC / 'connectors.json').write_text(json.dumps({'name': '20/20 Connector Catalog', 'version': '2026-10-15', 'securityRule': catalog['securityRule'], 'connectors': connectors}, indent=2, ensure_ascii=False))
+(PUBLIC / 'connectors.json').write_text(json.dumps({'name': '20/20 Connector Catalog', 'version': '2026-10-16', 'securityRule': catalog['securityRule'], 'connectors': connectors}, indent=2, ensure_ascii=False))
 
 for skill in skills:
     lines = [
