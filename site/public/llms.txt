@@ -1,0 +1,43 @@
+# 20/20 Data Refinery
+
+20/20 is an evidence-aware research universe for the 2020s. It covers 20 sectors, their industries, candidate companies, metrics, sources, caveats, and provisional research-priority scores.
+
+## Machine-readable resources
+- /data.json — structured JSON dataset with methodology and all sectors
+- /evidence.json — claim-level evidence graph with source relationships, evidence levels, and archive freshness metadata
+- /update-report.json — latest auditable source-check report; absent until the checker runs
+- /source-review-queue.json — prioritized exception queue grouped as access-restricted, broken-or-moved, or transient/network review
+- /source-exclusions.json — manifest of sources and hosts removed from active display after the latest viewability audit
+- /free-data-roadmap.md — prioritized free public data sources and a schema roadmap for the next ingestion pass
+- /data-catalog.json — 17 official public datasets with access level, coverage, cadence, sectors, metrics, endpoints, and caveats
+- /data-catalog.md — human-readable source catalog
+- /metric-recipes.json — normalized metric recipes and comparability fields for future ingestion
+- /free-data-samples.json — bounded live samples from keyless public APIs, with status and provenance
+- /api/v1/ — read-only agent API discovery
+- /api/v1/catalog — free public data catalog API
+- /api/v1/samples — bounded live public-API sample status and provenance
+- /api/v1/metrics — normalized free-data metric recipes
+- /api/v1/companies — candidate companies with sector context
+- /api/v1/vintages — source review and freshness metadata
+- /api/v1/comparability — warnings for currency, periods, denominators, and industry crosswalks
+- /api/openapi.json — OpenAPI contract for the agent API
+- /content/full-dataset.md — AI-readable Markdown dataset
+- /content/full-research-report.md — full synthesis report
+- /content/sectors/01.md through /content/sectors/20.md — individual sector research files
+- /skills.json — structured AI Skills Archive catalog
+- /connectors.json — safe connector metadata with credential names and scopes, never secret values
+- /content/skills/*.md — individual derived SKILL.md-style files
+
+## Human-readable routes
+- / — ranked overview and search
+- /sectors — searchable sector directory
+- /sectors/:slug — stable sector detail page
+- /evidence — searchable Evidence Map for claim tracing
+- /compare — comparison workspace for up to four sectors
+- /updates — source-check report and human review queue
+- /catalog — searchable-in-spirit catalog of free public datasets and ingestion readiness
+- /skills — searchable AI Skills Archive
+- /skills/:slug — individual skill detail page
+- /methodology — scoring definitions and interpretation guidance
+
+Scores are provisional research-priority estimates, not investment advice or definitive rankings. Candidate company lists are not rankings. Only sources from hosts that returned a viewable 2xx response in the latest audit remain active; excluded sources are retained for review and replacement. Evidence freshness currently means archive review metadata and does not claim that every active source was automatically rechecked beyond the audit. API keys are credentials, not skills; the archive stores connector requirements and credential names only. The API is public and read-only; it never returns secret values.

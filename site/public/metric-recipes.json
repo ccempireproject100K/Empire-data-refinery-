@@ -1,0 +1,165 @@
+{
+  "version": "2026-10-15-phase-two",
+  "recipes": [
+    {
+      "id": "company-profitability",
+      "name": "Company profitability profile",
+      "sources": [
+        "sec-edgar"
+      ],
+      "grain": "company-fiscal-period",
+      "fields": [
+        "revenue",
+        "operating income",
+        "net income",
+        "cash flow from operations",
+        "capital expenditure"
+      ],
+      "normalization": [
+        "currency",
+        "fiscal period",
+        "consolidated vs segment",
+        "GAAP vs IFRS"
+      ],
+      "sectors": [
+        "all"
+      ]
+    },
+    {
+      "id": "industry-labor-demand",
+      "name": "Industry labor demand",
+      "sources": [
+        "bls-data",
+        "census-developer"
+      ],
+      "grain": "industry-geography-period",
+      "fields": [
+        "employment",
+        "wages",
+        "job openings",
+        "employment growth",
+        "business births"
+      ],
+      "normalization": [
+        "NAICS version",
+        "geography",
+        "seasonal adjustment",
+        "nominal vs real"
+      ],
+      "sectors": [
+        "all"
+      ]
+    },
+    {
+      "id": "energy-system-scale",
+      "name": "Energy system scale and transition",
+      "sources": [
+        "eia-open-data",
+        "world-bank",
+        "epa-envirofacts"
+      ],
+      "grain": "energy-source-geography-period",
+      "fields": [
+        "generation",
+        "capacity",
+        "price",
+        "consumption",
+        "emissions"
+      ],
+      "normalization": [
+        "unit conversion",
+        "energy source",
+        "geography",
+        "CO2 scope"
+      ],
+      "sectors": [
+        "energy-and-utilities",
+        "renewable-energy-and-climate-technology"
+      ]
+    },
+    {
+      "id": "healthcare-demand-quality",
+      "name": "Healthcare demand and quality",
+      "sources": [
+        "cms-data",
+        "clinicaltrials",
+        "openfda"
+      ],
+      "grain": "provider-product-study-period",
+      "fields": [
+        "beneficiaries",
+        "payments",
+        "quality measure",
+        "trial enrollment",
+        "recalls",
+        "adverse events"
+      ],
+      "normalization": [
+        "provider type",
+        "product identity",
+        "study phase",
+        "population",
+        "reporting period"
+      ],
+      "sectors": [
+        "healthcare-and-pharmaceuticals",
+        "biotechnology-and-life-sciences"
+      ]
+    },
+    {
+      "id": "customer-friction",
+      "name": "Customer friction and service quality",
+      "sources": [
+        "cfpb-complaints",
+        "bts",
+        "cms-data"
+      ],
+      "grain": "company-product-geography-period",
+      "fields": [
+        "complaints",
+        "response timeliness",
+        "reliability",
+        "quality measure"
+      ],
+      "normalization": [
+        "customer/base denominator",
+        "product category",
+        "geography",
+        "period"
+      ],
+      "sectors": [
+        "financial-services-and-fintech",
+        "transportation-and-logistics",
+        "healthcare-and-pharmaceuticals"
+      ]
+    },
+    {
+      "id": "public-demand",
+      "name": "Public-sector demand and procurement",
+      "sources": [
+        "usaspending",
+        "census-developer",
+        "bts"
+      ],
+      "grain": "recipient-category-geography-fiscal-period",
+      "fields": [
+        "obligations",
+        "award count",
+        "agency concentration",
+        "employment",
+        "freight activity"
+      ],
+      "normalization": [
+        "award type",
+        "fiscal year",
+        "recipient identity",
+        "NAICS/PSC"
+      ],
+      "sectors": [
+        "aerospace-and-defense",
+        "professional-services-and-education",
+        "industrial-manufacturing-and-robotics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {"path":"/","title":"20/20 Data Refinery"},
+    {"path":"/sectors","title":"Explore all sectors"},
+    {"path":"/sectors/:slug","title":"Sector detail"},
+    {"path":"/evidence","title":"Evidence Map"},
+    {"path":"/compare","title":"Compare sectors"},
+    {"path":"/updates","title":"Update engine"},
+    {"path":"/catalog","title":"Free Data Catalog"},
+    {"path":"/skills","title":"AI Skills Archive"},
+    {"path":"/skills/:slug","title":"AI skill detail"},
+    {"path":"/methodology","title":"Methodology"},
+    {"path":"/data.json","title":"Machine-readable dataset"},
+    {"path":"/skills.json","title":"Machine-readable skills catalog"},
+    {"path":"/connectors.json","title":"Connector catalog"},
+    {"path":"/content/full-dataset.md","title":"AI-readable dataset"},
+    {"path":"/content/full-research-report.md","title":"Full research report"}
+  ]
+}

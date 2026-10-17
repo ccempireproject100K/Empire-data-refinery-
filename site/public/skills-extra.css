@@ -1,0 +1,20 @@
+.skill-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 48px; }
+.skill-card { display: block; background: var(--white); border: 1px solid var(--line); border-radius: 15px; padding: 22px; text-decoration: none; min-height: 230px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.skill-card:hover, .skill-card:focus-visible { transform: translateY(-3px); border-color: var(--teal); box-shadow: 0 12px 26px rgba(13, 27, 42, .08); }
+.skill-card-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 22px; }
+.skill-level, .skill-category { color: #127f70; font-size: .68rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.skill-category { color: var(--muted); text-align: right; }
+.skill-card h3 { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; letter-spacing: -.04em; margin: 0 0 9px; }
+.skill-card p { color: var(--muted); font-size: .88rem; margin: 0 0 18px; }
+.connector-callout { display: flex; align-items: center; justify-content: space-between; gap: 35px; background: var(--orange-soft); border-left: 4px solid var(--orange); padding: 24px 26px; }
+.connector-callout h2 { font-family: var(--serif); font-size: 2rem; font-weight: 500; letter-spacing: -.04em; margin: 6px 0 5px; }
+.connector-callout p { color: #70451f; max-width: 760px; margin: 0; }
+.connector-callout .download-link { white-space: nowrap; margin: 0; }
+.capability-list { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0 28px; }
+.workflow-list { padding-left: 24px; color: #405466; }
+.workflow-list li { padding: 8px 0 8px 5px; border-bottom: 1px solid #e6e2da; }
+.workflow-list li::marker { color: var(--orange); font-family: var(--serif); font-weight: 700; }
+.skill-stamp .stamp-rank { font-size: 3.1rem; letter-spacing: -.08em; }
+code { background: var(--paper-2); padding: 2px 5px; border-radius: 4px; color: #8d5527; font-size: .86em; }
+@media (max-width: 900px) { .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .connector-callout { display: block; } .connector-callout .download-link { display: inline-block; margin-top: 18px; } }
+@media (max-width: 590px) { .skill-grid { grid-template-columns: 1fr; } .skill-card { min-height: 0; } }

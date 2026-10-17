@@ -1,0 +1,271 @@
+{
+  "version": "2026-10-15-phase-two",
+  "generatedAt": "2026-10-15T21:14:33Z",
+  "policy": "Bounded samples from official public endpoints only. Samples demonstrate access and schema; they do not change sector rankings or claims.",
+  "sampleCount": 6,
+  "okCount": 5,
+  "results": [
+    {
+      "id": "sec-company-tickers",
+      "catalogId": "sec-edgar",
+      "url": "https://www.sec.gov/files/company_tickers.json",
+      "description": "SEC public-company ticker/CIK metadata",
+      "checkedAt": "2026-10-15T21:14:13Z",
+      "status": "http-error",
+      "httpStatus": 403,
+      "error": "Forbidden"
+    },
+    {
+      "id": "world-bank-us-gdp",
+      "catalogId": "world-bank",
+      "url": "https://api.worldbank.org/v2/country/USA/indicator/NY.GDP.MKTP.CD?format=json&per_page=5",
+      "description": "World Bank GDP current US dollars for the United States",
+      "checkedAt": "2026-10-15T21:14:16Z",
+      "status": "ok",
+      "httpStatus": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytesRead": 1146,
+      "sample": [
+        {
+          "page": 1,
+          "pages": 14,
+          "per_page": 5,
+          "total": 66,
+          "sourceid": "2",
+          "lastupdated": "2026-10-08"
+        },
+        [
+          {
+            "indicator": {
+              "id": "[truncated]",
+              "value": "[truncated]"
+            },
+            "country": {
+              "id": "[truncated]",
+              "value": "[truncated]"
+            },
+            "countryiso3code": "USA",
+            "date": "2025",
+            "value": 30769700000000,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 0
+          },
+          {
+            "indicator": {
+              "id": "[truncated]",
+              "value": "[truncated]"
+            },
+            "country": {
+              "id": "[truncated]",
+              "value": "[truncated]"
+            },
+            "countryiso3code": "USA",
+            "date": "2024",
+            "value": 29298013000000,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 0
+          },
+          {
+            "indicator": {
+              "id": "[truncated]",
+              "value": "[truncated]"
+            },
+            "country": {
+              "id": "[truncated]",
+              "value": "[truncated]"
+            },
+            "countryiso3code": "USA",
+            "date": "2023",
+            "value": 27811517000000,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "bls-cpi",
+      "catalogId": "bls-data",
+      "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?latest=true",
+      "description": "BLS latest CPI-U all-items series",
+      "checkedAt": "2026-10-15T21:14:18Z",
+      "status": "ok",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "bytesRead": 230,
+      "sample": {
+        "status": "REQUEST_SUCCEEDED",
+        "responseTime": 96,
+        "message": [],
+        "Results": {
+          "series": [
+            {
+              "seriesID": "[truncated]",
+              "data": "[truncated]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "census-acs-us",
+      "catalogId": "census-developer",
+      "url": "https://api.census.gov/data/2024/acs/acs1?get=NAME,B01001_001E,B19013_001E&for=us:1",
+      "description": "Census ACS population and median household income for the United States",
+      "checkedAt": "2026-10-15T21:14:20Z",
+      "status": "ok",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "bytesRead": 8531,
+      "sample": {
+        "textPreview": "<html style=\"font-size: 14px;\">\n\n<head>\n    <title>Missing Key</title>\n    <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/styles.css\">\n    <script type=\"text/javascript\" src=\"assets/jquery-1.4.4.min.js\"></script>\n    <script type=\"text/javascript\">\n        $(document).ready(function () {\n            function getCookie(name) {\n                const value = `; ${document.cookie}`;\n                const parts = value.split(`; ${name}"
+      }
+    },
+    {
+      "id": "openfda-drug-enforcement",
+      "catalogId": "openfda",
+      "url": "https://api.fda.gov/drug/enforcement.json?limit=2",
+      "description": "openFDA drug enforcement sample",
+      "checkedAt": "2026-10-15T21:14:26Z",
+      "status": "ok",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytesRead": 3180,
+      "sample": {
+        "meta": {
+          "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+          "terms": "https://open.fda.gov/terms/",
+          "license": "https://open.fda.gov/license/",
+          "last_updated": "2026-10-07",
+          "results": {
+            "skip": 0,
+            "limit": 2,
+            "total": 18010
+          }
+        },
+        "results": [
+          {
+            "status": "Terminated",
+            "city": "Peoria",
+            "state": "IL",
+            "country": "United States",
+            "classification": "Class II",
+            "openfda": {},
+            "product_type": "Drugs",
+            "event_id": "72241",
+            "recalling_firm": "Kalman Health & Wellness, Inc. dba Essential Wellness Pharma",
+            "address_1": "4625 N University St",
+            "address_2": "N/A",
+            "postal_code": "61614-5828",
+            "voluntary_mandated": "Voluntary: Firm initiated",
+            "initial_firm_notification": "Letter",
+            "distribution_pattern": "Nationwide",
+            "recall_number": "D-321-2016",
+            "product_description": "Progesterone 100 mg/mL in Corn Oil Injection, 2 mL vials, Rx only, Essential Wellness PHARMACY, 4625 N. University, Peoria, IL 61614.",
+            "product_quantity": "1 vial",
+            "reason_for_recall": "Lack of Assurance of Sterility:  A recall of all compounded sterile preparations within expiry is being initiated due to observations associated with poor sterile production practices resulting in a lack of sterility assurance for their finished drugs.",
+            "recall_initiation_date": "20150903",
+            "center_classification_date": "20151117",
+            "termination_date": "20171229",
+            "report_date": "20151125",
+            "code_info": "Lot #: 072915, Exp 10/29/2015"
+          },
+          {
+            "status": "Ongoing",
+            "city": "San Juan Del Rio",
+            "state": "N/A",
+            "country": "Mexico",
+            "classification": "Class II",
+            "openfda": {},
+            "product_type": "Drugs",
+            "event_id": "86162",
+            "recalling_firm": "Albek De Mexico S.A. De C.V.",
+            "address_1": "Oriente Cuatro No. 11 Nuevo",
+            "address_2": "N/A",
+            "postal_code": "N/A",
+            "voluntary_mandated": "Voluntary: Firm initiated",
+            "initial_firm_notification": "Press Release",
+            "distribution_pattern": "USA Nationwide",
+            "recall_number": "D-0080-2021",
+            "product_description": "Assured Instant Hand Sanitizer Aloe & Moisturizers (Ethyl Alcohol 70% v/v) 8 fl oz / 237 mL bottle, Distributed By: Greenbrier International, Inc. 500 Volvo Parkway, Chesapeake, VA 23320. Made in Mexico.UPC 639277928610",
+            "product_quantity": "27,000 bottles",
+            "reason_for_recall": "CGMP Deviations: Next Advanced Antibacterial Hand Sanitizer was found to be below the label claim for ethanol content and contained methanol. Other products were recalled because they were manufactured in the same facility as the product found to contain methanol.",
+            "recall_initiation_date": "20200730",
+            "center_classification_date": "20201117",
+            "report_date": "20201125",
+            "code_info": "1931102AL"
+          }
+        ]
+      }
+    },
+    {
+      "id": "clinicaltrials-diabetes",
+      "catalogId": "clinicaltrials",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.term=diabetes&pageSize=2",
+      "description": "ClinicalTrials.gov diabetes study sample",
+      "checkedAt": "2026-10-15T21:14:30Z",
+      "status": "ok",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "bytesRead": 30566,
+      "sample": {
+        "studies": [
+          {
+            "protocolSection": {
+              "identificationModule": "[truncated]",
+              "statusModule": "[truncated]",
+              "sponsorCollaboratorsModule": "[truncated]",
+              "oversightModule": "[truncated]",
+              "descriptionModule": "[truncated]",
+              "conditionsModule": "[truncated]",
+              "designModule": "[truncated]",
+              "armsInterventionsModule": "[truncated]",
+              "outcomesModule": "[truncated]",
+              "eligibilityModule": "[truncated]",
+              "contactsLocationsModule": "[truncated]"
+            },
+            "resultsSection": {
+              "participantFlowModule": "[truncated]",
+              "baselineCharacteristicsModule": "[truncated]",
+              "outcomeMeasuresModule": "[truncated]",
+              "adverseEventsModule": "[truncated]",
+              "moreInfoModule": "[truncated]"
+            },
+            "derivedSection": {
+              "miscInfoModule": "[truncated]",
+              "conditionBrowseModule": "[truncated]",
+              "interventionBrowseModule": "[truncated]"
+            },
+            "hasResults": true
+          },
+          {
+            "protocolSection": {
+              "identificationModule": "[truncated]",
+              "statusModule": "[truncated]",
+              "sponsorCollaboratorsModule": "[truncated]",
+              "oversightModule": "[truncated]",
+              "descriptionModule": "[truncated]",
+              "conditionsModule": "[truncated]",
+              "designModule": "[truncated]",
+              "armsInterventionsModule": "[truncated]",
+              "outcomesModule": "[truncated]",
+              "eligibilityModule": "[truncated]",
+              "contactsLocationsModule": "[truncated]",
+              "referencesModule": "[truncated]"
+            },
+            "derivedSection": {
+              "miscInfoModule": "[truncated]",
+              "conditionBrowseModule": "[truncated]",
+              "interventionBrowseModule": "[truncated]"
+            },
+            "hasResults": false
+          }
+        ],
+        "nextPageToken": "ZVNj7o2Elu8o3lpzBdv-p-numpOQJJxtYPCp"
+      }
+    }
+  ]
+}
