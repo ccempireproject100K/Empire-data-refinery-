@@ -83,10 +83,14 @@ research as a product, not just documents:
   and skills, with a discoverable OpenAPI contract
   (`site/public/api/openapi.json`), a data catalog, and downloadable
   Markdown/JSON datasets for AI-agent use.
-- **AI Skills Archive** — 51 derived AI-agent skills under
+- **AI Skills Archive** — 63 verified derived AI-agent skills under
   `site/public/content/skills/` (searchable, each with a downloadable
   `SKILL.md`; connector entries carry credential *references* only, never
-  credential values).
+  credential values). Candidate skills whose sources could not be verified
+  are kept in a clearly separate, labeled section under
+  `site/public/content/skills-unverified/` (indexed in
+  `site/public/skills-unverified.json`); they are **not** counted in the
+  verified total and never appear in `skills.json`.
 - **Roadmap** — `site/FREE-DATA-ROADMAP.md` prioritizes free official data
   sources, sector gaps, and freshness/comparability safeguards.
 
