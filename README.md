@@ -61,6 +61,46 @@ framework** rather than treating them as standalone reads:
 - **A recommended 90-day program** for turning the framework into a
   standardized, reproducible data set.
 
+## The site
+
+Under **[site/](site/)** lives the refinery's working website export — the
+research as a product, not just documents:
+
+- **Static front end + Node server** (`site/public/`, `site/server.js`;
+  `npm start`, port 3000): a searchable research experience over the 20
+  sectors with stable sector pages, full-dataset client-side search, and
+  filters for rank, score dimensions, evidence strength, and source
+  attributes.
+- **Claim-level evidence engine** — `site/public/evidence.json` holds stable
+  claim-level evidence records with source relationships, evidence levels,
+  freshness status, and caveat notes; an Evidence Map and sector comparison
+  views sit on top of it.
+- **Source-checking pipeline** (`site/scripts/`) — build scripts for the
+  dataset, catalog, evidence, and skills, plus a bounded source-checking
+  engine that flags changed or unreachable sources (with an exclusion
+  manifest and audit history) without silently changing claims or rankings.
+- **Read-only agent API** for sectors, claims, sources, search, comparisons,
+  and skills, with a discoverable OpenAPI contract
+  (`site/public/api/openapi.json`), a data catalog, and downloadable
+  Markdown/JSON datasets for AI-agent use.
+- **AI Skills Archive** — 20 derived AI-agent skills under
+  `site/public/content/skills/` (searchable, each with a downloadable
+  `SKILL.md`; connector entries carry credential *references* only, never
+  credential values).
+- **Roadmap** — `site/FREE-DATA-ROADMAP.md` prioritizes free official data
+  sources, sector gaps, and freshness/comparability safeguards.
+
+**Status (per `site/TODO.md`):** the project is **Preview-only by the owner's
+choice**. Its delivery checklist is complete except one item: once the site
+is deployed, create the recurring weekly ScheduleTask for the source-checking
+engine.
+
+**Note on sector copies:** the site carries its own sector texts under
+`site/public/content/sectors/`, which differ slightly from the standalone
+reports in `reports/`. Both are preserved intentionally — `reports/` is the
+report corpus as received; the site copies are the site's own rendering
+inputs.
+
 ## Corpus conventions
 
 These conventions are observed consistently across the reports and should be
@@ -89,6 +129,8 @@ preserved by any future addition or revision:
 - **Sector reports received 2026-10-16** — all 20 reports staged into this
   repository as received (contents unchanged; files renamed descriptively by
   sector).
+- **Website export received 2026-10-16** — the full site project staged
+  under `site/` with its structure preserved (see "The site" above).
 - **Skill-archive deepening is a later phase**: the AI skill archives that
   belong with this technology-focused refinery (taxonomy, per-skill material,
   quality scoring, deduplication, documentation) will be built on top of this
