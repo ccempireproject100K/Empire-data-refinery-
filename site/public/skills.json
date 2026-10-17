@@ -2142,6 +2142,473 @@
       "connectors": [
         "audit-log"
       ]
+    },
+    {
+      "slug": "framework-free-agent-loop",
+      "name": "Framework-Free Agent Construction",
+      "level": "Beginner",
+      "category": "Foundations",
+      "summary": "Build a complete working agent in a single short Python file with no framework — a message list, typed tool definitions, and a loop — so every mechanic of agency is visible and understood.",
+      "uses": [
+        "Use when learning how agents actually work beneath framework abstractions.",
+        "Use when a prototype must be debuggable line by line.",
+        "Use when auditing what a framework does on your behalf before adopting it."
+      ],
+      "capabilities": [
+        "Agent loop mechanics",
+        "Tool definition and dispatch",
+        "Conversation state handling",
+        "Error feedback to the model",
+        "Single-file execution with inline dependencies"
+      ],
+      "workflow": [
+        "Declare dependencies inline in the script header (uv-style) so the file runs anywhere with one command and no environment setup.",
+        "Define a small set of tools (read a file, list a directory, edit a file) as schemas the model can call.",
+        "Keep the whole conversation as one growing message list; that list is the agent’s entire memory.",
+        "Loop: send messages plus tool definitions to the model, execute any tool calls it returns, append the results, and repeat until it answers without calling a tool.",
+        "Return tool errors to the model as messages so it can correct itself instead of crashing the run.",
+        "Log every tool call and result; when the loop misbehaves, the log is the explanation."
+      ],
+      "sources": [
+        {
+          "title": "Dave Ebbelaar — single-file-ai-agent-tutorial repository",
+          "url": "https://github.com/daveebbelaar/single-file-ai-agent-tutorial",
+          "license": "MIT License; verify the LICENSE file for copied code or text."
+        }
+      ],
+      "archiveNote": "Derived summary of the tutorial repository (which credits Thorsten Ball’s \"How to Build an Agent\" as its basis); no tutorial code or text is reproduced.",
+      "connectors": []
+    },
+    {
+      "slug": "single-file-agents",
+      "name": "Single-File Agents",
+      "level": "Intermediate",
+      "category": "Agent architecture",
+      "summary": "Package each agent as one self-contained, single-purpose Python file with inline dependencies — runnable, shareable, and versionable like a script instead of a project.",
+      "uses": [
+        "Use when an agent does exactly one job (query a database, reshape JSON, summarize a codebase) and must be easy to hand to someone.",
+        "Use when spinning up many small specialist agents beats maintaining one monolith.",
+        "Use when an agent must run in a fresh environment with zero setup ceremony."
+      ],
+      "capabilities": [
+        "Single-purpose agent design",
+        "Inline dependency declaration",
+        "CLI-as-interface design",
+        "Provider portability",
+        "Copy-and-version iteration"
+      ],
+      "workflow": [
+        "Give the agent one job and one prompt tuned to it; refuse scope creep into a second job — write a second file instead.",
+        "Declare every dependency in the file header so a single command (uv run) provisions and executes it anywhere.",
+        "Expose the interface as command-line arguments and environment variables for provider keys; never hardcode secrets.",
+        "Keep the prompt, tools, and loop in the one file so the agent’s whole behavior can be read in minutes.",
+        "Iterate by copying the file to a new version rather than mutating the original, so working agents never regress silently.",
+        "Compose agents by chaining their command-line input and output instead of merging them into a framework."
+      ],
+      "sources": [
+        {
+          "title": "IndyDevDan (disler) — single-file-agents repository",
+          "url": "https://github.com/disler/single-file-agents",
+          "license": "No LICENSE file in the repository — concepts summarized only, no code or text reproduced."
+        },
+        {
+          "title": "Dave Ebbelaar — single-file-ai-agent-tutorial repository",
+          "url": "https://github.com/daveebbelaar/single-file-ai-agent-tutorial",
+          "license": "MIT License; verify the LICENSE file for copied code or text."
+        }
+      ],
+      "archiveNote": "Derived pattern summary from the linked public repositories; no repository code or text is reproduced.",
+      "connectors": []
+    },
+    {
+      "slug": "agent-lifecycle-hooks",
+      "name": "Agent Lifecycle Hooks",
+      "level": "Intermediate",
+      "category": "Agent infrastructure",
+      "summary": "Attach deterministic scripts to the lifecycle events of a coding agent — before and after tool calls, on notifications, at stop — to block dangerous actions, format output, log everything, and get the agent’s attention (or yours) at the right moment.",
+      "uses": [
+        "Use when an autonomous coding agent must never run destructive commands (rm -rf, secret-file reads) even in unattended mode.",
+        "Use when every tool call needs an audit trail for debugging or compliance.",
+        "Use when long-running agents should notify you — by sound, speech, or message — only when they finish or need input."
+      ],
+      "capabilities": [
+        "Lifecycle event mapping",
+        "Pre-tool guardrails",
+        "Post-tool automation",
+        "Notification and text-to-speech alerts",
+        "Hook payload logging"
+      ],
+      "workflow": [
+        "Map the lifecycle events your harness exposes (session start, prompt submit, pre/post tool use, notification, sub-agent stop, session stop) and what each payload contains.",
+        "Write hooks as small single-file scripts that read the event payload as JSON on stdin and stay fast and deterministic.",
+        "Put safety in pre-tool hooks: inspect the pending command or file path and block destructive patterns with a non-zero exit before anything executes.",
+        "Put hygiene in post-tool hooks: auto-format, lint, or test what the agent just changed, and feed failures back.",
+        "Route notifications to a channel you will actually notice (desktop alert, text-to-speech summary) so unattended runs stay supervised.",
+        "Log every event with its payload from day one; when an agent surprises you, the hook log is how you reconstruct why."
+      ],
+      "sources": [
+        {
+          "title": "I’m HOOKED on Claude Code Hooks: Advanced Agentic Coding — IndyDevDan (video)",
+          "url": "https://www.youtube.com/watch?v=J5B9UGTuNoM",
+          "license": "YouTube standard license — concepts summarized, no content reproduced."
+        },
+        {
+          "title": "IndyDevDan (disler) — claude-code-hooks-mastery repository",
+          "url": "https://github.com/disler/claude-code-hooks-mastery",
+          "license": "No LICENSE file in the repository — concepts summarized only, no code or text reproduced."
+        }
+      ],
+      "archiveNote": "Derived practice summary from the linked video (page opened and checked) and its companion repository; no transcript or repository text is reproduced.",
+      "connectors": [
+        "audit-log"
+      ]
+    },
+    {
+      "slug": "coding-agent-fleet-observability",
+      "name": "Coding-Agent Fleet Observability",
+      "level": "Advanced",
+      "category": "Quality and governance",
+      "summary": "Stream every hook event from every running coding agent into one store and a live dashboard — sessions, tool calls, handoffs, and lifecycle events — so parallel agent teams stay visible and debuggable instead of chaotic.",
+      "uses": [
+        "Use when several agents or sub-agents run in parallel and nobody can say what each one did.",
+        "Use when an agent team produced a bad result and the failure must be reconstructed event by event.",
+        "Use when deciding whether orchestration is actually helping, with counts instead of impressions."
+      ],
+      "capabilities": [
+        "Hook event streaming",
+        "Session and source tagging",
+        "Event storage and filtering",
+        "Live multi-agent dashboards",
+        "Handoff tracing"
+      ],
+      "workflow": [
+        "Emit an event from a hook at every lifecycle point (pre/post tool, prompt submit, sub-agent start/stop, stop) — hooks are the one place nothing escapes notice.",
+        "Tag each event with its source application, session, and agent identity before sending it anywhere.",
+        "POST events to a small collector that appends them to a queryable store (SQLite is enough) in arrival order.",
+        "Push new events to a web dashboard over a socket so a human can watch the fleet work in real time and filter by agent, session, or event type.",
+        "When something goes wrong, replay the session’s event stream to find the first wrong tool call or handoff instead of re-reading final code.",
+        "Keep raw payloads, not just summaries — the argument of the tool call you did not expect is the one that matters."
+      ],
+      "sources": [
+        {
+          "title": "IndyDevDan (disler) — claude-code-hooks-multi-agent-observability repository",
+          "url": "https://github.com/disler/claude-code-hooks-multi-agent-observability",
+          "license": "No LICENSE file in the repository — concepts summarized only, no code or text reproduced."
+        },
+        {
+          "title": "Claude Code Multi-Agent Orchestration with Opus 4.6, Tmux and Agent Sandboxes — IndyDevDan (video)",
+          "url": "https://www.youtube.com/watch?v=RpUTF_U4kiw",
+          "license": "YouTube standard license — concepts summarized, no content reproduced."
+        }
+      ],
+      "archiveNote": "Derived architecture summary from the linked repository and video (both opened and checked); it complements the trace-debugging entry in this archive with the fleet-level event pipeline. No source text is reproduced.",
+      "connectors": [
+        "audit-log"
+      ]
+    },
+    {
+      "slug": "programmable-coding-agents",
+      "name": "Programmable Coding Agents",
+      "level": "Intermediate",
+      "category": "Tool use",
+      "summary": "Drive a coding agent as a programmable Unix-style utility — headless prompts, tool allowlists, pipes and scripts — so agents slot into shell pipelines, CI, and other programs instead of only interactive chat.",
+      "uses": [
+        "Use when an agent step belongs inside a script, cron job, or CI pipeline.",
+        "Use when another program (a bot, a dashboard, a voice interface) must invoke the agent and consume its output.",
+        "Use when the same agent task must run identically across many repositories."
+      ],
+      "capabilities": [
+        "Headless agent invocation",
+        "Tool allowlisting",
+        "Pipeline composition",
+        "Cross-language drivers",
+        "Automation triggers"
+      ],
+      "workflow": [
+        "Invoke the agent non-interactively with the task as an argument and capture its output as data, not as a transcript to eyeball.",
+        "Scope every invocation with an explicit tool allowlist (for example write/edit only) so a scripted agent can never exceed its brief.",
+        "Compose with pipes and files: agent output becomes the next command’s input, in the Unix tradition.",
+        "Wrap invocations in the host language of the system (shell, JavaScript, Python) and treat failures as exit codes to handle, not surprises.",
+        "Add triggers deliberately — a schedule, a webhook, a message, a voice command — each with the same allowlist discipline.",
+        "Keep a human gate in front of destructive or publishing steps no matter how reliable the pipeline feels."
+      ],
+      "sources": [
+        {
+          "title": "AI Coding is NOT ENOUGH: Claude Code’s NEXT LEVEL Agentic Coding FEATURE — IndyDevDan (video)",
+          "url": "https://www.youtube.com/watch?v=2TIXl2rlA6Q",
+          "license": "YouTube standard license — concepts summarized, no content reproduced."
+        },
+        {
+          "title": "IndyDevDan (disler) — claude-code-is-programmable repository",
+          "url": "https://github.com/disler/claude-code-is-programmable",
+          "license": "No LICENSE file in the repository — concepts summarized only, no code or text reproduced."
+        }
+      ],
+      "archiveNote": "Derived practice summary from the linked video (page opened and checked) and its companion repository; no transcript or repository text is reproduced.",
+      "connectors": [
+        "provider-api"
+      ]
+    },
+    {
+      "slug": "cross-model-prompt-panels",
+      "name": "Cross-Model Prompt Panels",
+      "level": "Intermediate",
+      "category": "Agent architecture",
+      "summary": "Send the same prompt to several models from different providers through one interface, save the answers side by side, and — for hard calls — let a panel of models advise while one decider model commits.",
+      "uses": [
+        "Use when choosing which provider or model deserves a workload, with evidence instead of loyalty.",
+        "Use when a high-stakes answer deserves more than one model’s opinion.",
+        "Use when prompts live as files that should run identically against any model."
+      ],
+      "capabilities": [
+        "Provider-prefixed model addressing",
+        "Parallel fan-out",
+        "Side-by-side answer capture",
+        "Panel-and-decider deliberation",
+        "Prompt files as assets"
+      ],
+      "workflow": [
+        "Keep prompts as standalone files so the identical text can be sent to any model without copy drift.",
+        "Address models with explicit provider prefixes so one command can mix providers (and local models) in a single run.",
+        "Fan the prompt out to the panel in parallel and save every response as its own file for diffing.",
+        "For decisions, use the board pattern: several models answer as advisors, then one designated decider model reads all answers and commits to a decision with reasons.",
+        "Record cost, latency, and your verdict per model; repeat on a schedule because provider quality moves.",
+        "Promote the winning model to the default for that prompt class, and re-run the panel when a new model lands."
+      ],
+      "sources": [
+        {
+          "title": "IndyDevDan (disler) — just-prompt repository (MCP server for multi-provider prompting)",
+          "url": "https://github.com/disler/just-prompt",
+          "license": "No LICENSE file in the repository — concepts summarized only, no code or text reproduced."
+        }
+      ],
+      "archiveNote": "Derived pattern summary from the linked public repository; it complements the prompt-evaluation entry in this archive — panels compare live answers, evaluation pipelines score against datasets. No repository text is reproduced.",
+      "connectors": [
+        "provider-api"
+      ]
+    },
+    {
+      "slug": "type-safe-agent-development",
+      "name": "Type-Safe Agent Development (PydanticAI)",
+      "level": "Intermediate",
+      "category": "Agent architecture",
+      "summary": "Build agents whose inputs, dependencies, tools, and results are typed and validated by Pydantic models, so malformed model output is caught, fed back, and corrected instead of silently corrupting downstream work.",
+      "uses": [
+        "Use when an agent’s output feeds code, a database, or an API that will break on malformed data.",
+        "Use when agents need runtime context (user, database, services) injected cleanly and testably.",
+        "Use when a Python team wants agent code that behaves like ordinary, testable software."
+      ],
+      "capabilities": [
+        "Typed result models",
+        "Dependency injection",
+        "Validated tool signatures",
+        "Validation-driven retries",
+        "Agent unit testing"
+      ],
+      "workflow": [
+        "Define the agent’s result as a Pydantic model first; the model’s job is to produce data that validates, not prose that parses.",
+        "Declare the agent’s runtime dependencies as a typed object (clients, configuration, user context) and inject it rather than reaching for globals.",
+        "Write tools as typed Python functions; their signatures become the schemas the model sees, and bad arguments fail loudly.",
+        "Let validation errors flow back to the model as retry prompts so it repairs its own output within a bounded number of attempts.",
+        "Stream structured results when the UI needs progress, and keep message history inspectable for debugging.",
+        "Test with stand-in models that return canned outputs, and evaluate the real model against the same cases before shipping."
+      ],
+      "sources": [
+        {
+          "title": "Dave Ebbelaar — pydantic-ai-tutorial repository",
+          "url": "https://github.com/daveebbelaar/pydantic-ai-tutorial",
+          "license": "MIT License (LICENCE file in the repository); verify the LICENCE file for copied code or text."
+        }
+      ],
+      "archiveNote": "Derived summary of the tutorial repository’s presentation of the PydanticAI framework; no tutorial code or text is reproduced.",
+      "connectors": []
+    },
+    {
+      "slug": "ai-cookbook-complexity-ladder",
+      "name": "AI Cookbook: Climbing the Complexity Ladder",
+      "level": "Intermediate",
+      "category": "Foundations",
+      "summary": "Grow AI systems one rung at a time — augmented LLM call, prompt chain, tool-calling agent, agent harness, multi-agent team — reusing tested cookbook modules at each rung and climbing only when the simpler rung provably fails.",
+      "uses": [
+        "Use when scoping a new AI feature and resisting the urge to start with a multi-agent system.",
+        "Use when teaching a team a shared progression from first LLM call to production agent.",
+        "Use when a stalled agent project needs to be rebuilt from the last rung that worked."
+      ],
+      "capabilities": [
+        "Complexity staging",
+        "Workflow pattern reuse",
+        "Knowledge module integration",
+        "MCP server building blocks",
+        "Copy-adapt development"
+      ],
+      "workflow": [
+        "Start at rung one: a single LLM call augmented with retrieval or examples. Ship it and measure before climbing.",
+        "Add prompt chains when one call cannot hold the reasoning; keep each step in the chain inspectable.",
+        "Introduce tool calling when the system must act on the world, with the chain’s steps becoming the agent’s tools.",
+        "Wrap the agent in a harness (state, retries, logging, budgets) when it leaves the notebook and meets real users.",
+        "Split into multiple agents only when a single agent’s context or reliability demonstrably breaks — and keep the cookbook’s knowledge, pattern, and MCP modules as the shared parts bin at every rung.",
+        "At each rung, copy the closest working recipe and adapt it, instead of designing from a blank file."
+      ],
+      "sources": [
+        {
+          "title": "Dave Ebbelaar — ai-cookbook repository",
+          "url": "https://github.com/daveebbelaar/ai-cookbook",
+          "license": "MIT License (LICENCE file in the repository, 2025); verify the LICENCE file for copied code or text."
+        }
+      ],
+      "archiveNote": "Derived summary of the cookbook’s structure and progression (agents, patterns, knowledge, MCP, and tools modules); no cookbook code or text is reproduced.",
+      "connectors": []
+    },
+    {
+      "slug": "llm-driven-web-scraping",
+      "name": "LLM-Driven Web Scraping",
+      "level": "Intermediate",
+      "category": "Knowledge retrieval",
+      "summary": "Extract structured data from websites with an LLM in the loop — define the schema first, fetch and clean pages, let the model extract against the schema, and escalate to a browsing agent only for pages that fight back.",
+      "uses": [
+        "Use when a site has no API and its layout changes too often for hand-written selectors.",
+        "Use when the target data is semantic (prices with conditions, specs, reviews) rather than tidy tables.",
+        "Use when a research agent needs web facts in a strict, citable shape."
+      ],
+      "capabilities": [
+        "Schema-first extraction",
+        "Page cleaning for models",
+        "Structured output validation",
+        "Auth and CAPTCHA escalation",
+        "Browser-agent fallback"
+      ],
+      "workflow": [
+        "Write the output schema before touching the site: fields, types, and what counts as missing.",
+        "Pick the cheapest method that can work per site — plain fetch and parse first, LLM extraction second, a full browsing agent last.",
+        "Convert pages to clean text or markdown and trim navigation and boilerplate before anything reaches the model; tokens spent on menus buy nothing.",
+        "Extract against the schema with structured output, then validate programmatically and retry or flag failures instead of accepting near-misses.",
+        "Handle login walls and CAPTCHAs by escalating deliberately — an authenticated session or a browsing agent — and record which sites required it.",
+        "Cache the raw pages so extraction can be re-run when the schema improves, without re-crawling."
+      ],
+      "sources": [
+        {
+          "title": "This is how I scrape 99% websites via LLM — AI Jason (Jason Zhou) (video)",
+          "url": "https://www.youtube.com/watch?v=7kbQnLN2y_I",
+          "license": "YouTube standard license — concepts summarized, no content reproduced."
+        }
+      ],
+      "archiveNote": "Derived practice summary from the linked video (page opened and checked, including its method overview and chapter structure); no transcript text is reproduced.",
+      "connectors": [
+        "web-search"
+      ]
+    },
+    {
+      "slug": "deterministic-agent-workflow-harnesses",
+      "name": "Deterministic Agent Workflow Harnesses",
+      "level": "Advanced",
+      "category": "Agent infrastructure",
+      "summary": "Encode a development process as a versioned workflow of nodes — deterministic steps (tests, scripts, git) mixed with AI steps (plan, implement, review) — so agent runs follow the same sequence, gates, and artifacts every time instead of improvising.",
+      "uses": [
+        "Use when agent output quality varies run to run because the process lives in a prompt instead of a structure.",
+        "Use when a team wants one shared, reviewable definition of \"how we build a feature with agents\".",
+        "Use when long agent tasks should run unattended and arrive as a finished, validated pull request."
+      ],
+      "capabilities": [
+        "Workflow-as-code (YAML)",
+        "Mixed deterministic/AI nodes",
+        "Loop-until-done steps",
+        "Worktree isolation",
+        "Human approval gates"
+      ],
+      "workflow": [
+        "Write the process down as a workflow file: named nodes with explicit dependencies — plan, implement, validate, review, approve, publish.",
+        "Make every step that can be deterministic a plain command (test suite, linter, build) with no model involved; reserve AI nodes for judgment work.",
+        "Give implementation nodes a loop with an explicit completion condition and a fresh context per iteration, so long tasks do not rot in one endless conversation.",
+        "Run each workflow in an isolated git worktree so parallel runs and failed runs never contaminate the main checkout.",
+        "Insert human approval gates at irreversible points (merge, deploy, publish) and let the workflow wait there indefinitely.",
+        "Commit the workflow files with the project so the process itself is reviewed, versioned, and identical for every runner — CLI, chat, or scheduler."
+      ],
+      "sources": [
+        {
+          "title": "Cole Medin — Archon repository (open-source harness builder for AI coding)",
+          "url": "https://github.com/coleam00/Archon",
+          "license": "MIT License; verify the LICENSE file for copied code or text."
+        }
+      ],
+      "archiveNote": "Derived summary of the Archon project’s documented workflow model; no repository code or text is reproduced.",
+      "connectors": []
+    },
+    {
+      "slug": "crawl-to-rag-knowledge-servers",
+      "name": "Crawl-to-RAG Knowledge Servers",
+      "level": "Advanced",
+      "category": "Knowledge retrieval",
+      "summary": "Turn websites and documentation into a queryable knowledge base for agents: crawl and chunk the source, embed it into a vector store with source tags, and serve retrieval to any agent through an MCP server.",
+      "uses": [
+        "Use when a coding assistant must answer from current product or library documentation instead of its training data.",
+        "Use when the same knowledge base should serve many agents and tools through one interface.",
+        "Use when retrieval quality needs upgrading (hybrid search, reranking) in one place, for every consumer."
+      ],
+      "capabilities": [
+        "Recursive web crawling",
+        "Structure-aware chunking",
+        "Vector storage with source filtering",
+        "MCP knowledge tools",
+        "Layered retrieval strategies"
+      ],
+      "workflow": [
+        "Point the crawler at the source and let it detect the shape — single pages, sitemaps, or plain-text files — then crawl internal links recursively and in parallel.",
+        "Chunk by document structure (headers first, size second) so each chunk is a meaningful unit, and tag every chunk with its source.",
+        "Embed chunks into a vector store that supports filtering by source, so queries can be scoped to one site or library.",
+        "Expose two tools over MCP — crawl/ingest and retrieve — so any connected agent can refresh and query the same knowledge base.",
+        "Layer retrieval strategies behind the same interface: contextual embeddings, hybrid vector-plus-keyword search, reranking, and specialized extraction for code examples.",
+        "Re-crawl on a schedule or on demand; a knowledge server whose sources silently age becomes a confident liar."
+      ],
+      "sources": [
+        {
+          "title": "Cole Medin — mcp-crawl4ai-rag repository (Crawl4AI RAG MCP Server)",
+          "url": "https://github.com/coleam00/mcp-crawl4ai-rag",
+          "license": "MIT License; verify the LICENSE file for copied code or text."
+        }
+      ],
+      "archiveNote": "Derived architecture summary from the linked repository; it complements the agentic RAG entry in this archive with the crawl-and-serve pipeline. No repository code or text is reproduced.",
+      "connectors": [
+        "document-store",
+        "web-search"
+      ]
+    },
+    {
+      "slug": "team-based-validation",
+      "name": "Team-Based Validation with Self-Checking Plans",
+      "level": "Advanced",
+      "category": "Quality and governance",
+      "summary": "Pair the agent that plans and builds with independent validator agents — and with plan files that carry their own validation hooks — so work is checked against the spec by something other than the agent that produced it.",
+      "uses": [
+        "Use when a single agent grades its own homework and defects ship with confident summaries.",
+        "Use when plans must contain required sections (tasks, orchestration, verification) before building starts.",
+        "Use when a growing library of specialist sub-agents needs consistent structure and tool discipline."
+      ],
+      "capabilities": [
+        "Spec-driven building",
+        "Self-validating plan files",
+        "Independent validator agents",
+        "Task-system orchestration",
+        "Meta-agent generation"
+      ],
+      "workflow": [
+        "Require a written spec before building: goal, step-by-step tasks, team roles, and how completion will be verified.",
+        "Attach validators to the plan itself — hooks that fire when planning stops and check the spec file exists and contains every required section; planning is not done until its own checks pass.",
+        "Form the team from specialized sub-agents: builders that implement tasks from the spec and validators that check results against it, coordinated through a shared task list.",
+        "Keep validators independent — they read the spec and the output, never the builder’s reasoning — and loop failures back as new tasks.",
+        "When the team lacks a role, generate the new sub-agent from a description with a meta-agent that applies the house structure and minimal tool set, instead of hand-writing each one.",
+        "Treat a passed validation as the definition of done, and archive the spec with the result for audit."
+      ],
+      "sources": [
+        {
+          "title": "IndyDevDan (disler) — claude-code-hooks-mastery repository (team-based validation system and meta-agent)",
+          "url": "https://github.com/disler/claude-code-hooks-mastery",
+          "license": "No LICENSE file in the repository — concepts summarized only, no code or text reproduced."
+        }
+      ],
+      "archiveNote": "Derived pattern summary from the linked repository’s documented validation system; no repository code or text is reproduced.",
+      "connectors": [
+        "audit-log"
+      ]
     }
   ]
 }
