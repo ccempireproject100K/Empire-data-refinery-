@@ -1,6 +1,6 @@
 {
   "name": "20/20 Connector Catalog",
-  "version": "2026-10-15",
+  "version": "2026-10-16",
   "securityRule": "API keys are credentials, not skills. This archive stores credential names and connector requirements only; it never stores secret key values.",
   "connectors": [
     {
