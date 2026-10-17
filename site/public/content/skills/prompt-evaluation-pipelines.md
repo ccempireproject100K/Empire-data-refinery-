@@ -45,5 +45,5 @@ Build repeatable evaluation sets and graders that score prompt quality before an
 
 Derived from public course concepts; grader prompts and datasets from sources are not reproduced.
 
-- [Anthropic courses repository — Prompt evaluations course](https://github.com/anthropics/courses) — Public Anthropic course repository; review the repository terms before reusing code or text.
-- [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) — Course access is free; use a derived summary rather than copying lesson text.
+- [Anthropic courses repository — Prompt evaluations course](https://github.com/anthropics/courses) — CC BY-NC 4.0 — derived summaries permitted for this free archive; non-commercial only, so this entry is excluded from any future paid tier.
+- [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) — Apache-2.0 course repository; use a derived summary rather than copying lesson text.

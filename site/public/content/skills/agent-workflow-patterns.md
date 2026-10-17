@@ -43,7 +43,7 @@ Choose and compose predefined workflow patterns — chaining, routing, paralleli
 
 ## Provenance and licensing
 
-Derived pattern summary. Pattern names follow the source taxonomy; all workflow steps are rewritten for this archive.
+Derived pattern summary written for this archive from the linked public course material; the pattern names are a widely used taxonomy, not quoted text.
 
-- [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — Official Anthropic engineering guidance; use the source link rather than copying text.
-- [Anthropic courses repository](https://github.com/anthropics/courses) — Public Anthropic course repository; review the repository terms before reusing code or text.
+- [LangChain Academy — Introduction to LangGraph](https://github.com/langchain-ai/langchain-academy) — MIT License; verify the LICENSE file for copied code or text.
+- [Anthropic courses repository — Tool use course](https://github.com/anthropics/courses) — CC BY-NC 4.0 — derived summaries permitted for this free archive; non-commercial only, so this entry is excluded from any future paid tier.

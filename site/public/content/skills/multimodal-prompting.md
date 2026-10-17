@@ -45,5 +45,5 @@ Give models images and documents as evidence, structure what they should look fo
 
 Derived summary of public course concepts; no course exercises are reproduced.
 
-- [Anthropic courses repository — API fundamentals](https://github.com/anthropics/courses) — Public Anthropic course repository; review the repository terms before reusing code or text.
+- [Anthropic courses repository — API fundamentals](https://github.com/anthropics/courses) — CC BY-NC 4.0 — derived summaries permitted for this free archive; non-commercial only, so this entry is excluded from any future paid tier.
 - [Microsoft Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners) — MIT-licensed Microsoft course repository; verify the LICENSE file for copied code or text.
