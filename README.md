@@ -124,6 +124,10 @@ preserved by any future addition or revision:
 - **Each report carries its own caveats section** covering interpretation
   risks, comparability limits, and where the evidence is thin.
 
+## Roadmap
+
+The improvement roadmap — baseline, Tier A–E work, graduation criteria for the provisional scores, the gated monetization sequence, and phasing — lives in **[ROADMAP.md](ROADMAP.md)**.
+
 ## Status
 
 - **Sector reports received 2026-10-16** — all 20 reports staged into this
