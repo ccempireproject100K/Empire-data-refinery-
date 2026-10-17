@@ -1,0 +1,87 @@
+# Consumer goods and retail — 20/20 sector report
+
+## Sector finding
+
+**Consumer goods and retail is financially attractive in the 2020s because it combines a very large, recurring demand base with several ways to monetize scale:** product sales, private-label margin, membership fees, marketplace commissions, retail media/advertising, fulfillment, and omnichannel convenience. The evidence supports an attractive *opportunity set*, not a blanket claim that every retailer or brand is profitable. Competition, labor, freight, shrink, returns, inflation and interest rates can erase margins.
+
+The sector should be screened as a set of businesses rather than as one homogeneous industry. A warehouse club, an online marketplace, a branded household-products company and a department store have different economics.
+
+## Why the sector can be lucrative/profitable in the 2020s
+
+1. **Large and resilient consumer-spending base.** The Bureau of Economic Analysis defines personal consumption expenditures (PCE) as the value of goods and services purchased by or on behalf of U.S. residents and publishes monthly, quarterly and annual data. PCE is therefore a broad, recurring demand gauge rather than a one-off market estimate ([BEA Consumer Spending](https://www.bea.gov/data/consumer-spending/main)). Essential categories such as food, household supplies, personal care and health-related goods can be less discretionary, although consumers can trade down within categories.
+
+2. **Digital/omnichannel growth expands reach and creates monetizable data and services.** Census reported that U.S. e-commerce sales in Q2 2026 were $340.2 billion seasonally adjusted, up 12.2% year over year, and 17.1% of total retail sales; the historical time series is downloadable from the same official page ([Census Quarterly Retail E-Commerce Sales](https://www.census.gov/retail/ecommerce.html)). For 20/20 screening, use the downloadable series rather than assuming that any single quarter's share is a long-run forecast. Walmart describes more than 8,000 pickup and delivery locations globally, same-day pickup/delivery across substantially all U.S. stores, and an omnichannel ecosystem that includes membership, advertising, marketplace and fulfillment services ([Walmart FY2025 Annual Report](https://stock.walmart.com/_assets/_d172a7918f5003c834c91e68d309d655/walmart/db/950/9949/annual_report/Walmart+2025+Annual+Report.pdf)).
+
+3. **Scale can convert volume into operating leverage.** Walmart U.S. reported FY2025 net sales of $462.4 billion, or 69% of consolidated sales, in its annual report. Amazon reported 2024 North America sales of $387.5 billion, up 10%, and North America operating income of $25.0 billion versus $14.9 billion in 2023; Amazon attributed the improvement primarily to increased unit sales and advertising sales, partly offset by fulfillment and shipping costs ([Amazon 2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm)). These are company-specific measured outcomes, not sector averages.
+
+4. **Recurring membership and loyalty revenue can improve economics.** Costco's FY2024 filing reports $4.828 billion of membership-fee revenue, 76.2 million paid members, and renewal rates of 92.9% in the U.S./Canada and 90.5% worldwide. Costco also reported $254.453 billion total revenue, $9.285 billion operating income and $7.367 billion net income ([Costco 2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/cost-20240901.htm)). Membership is a candidate quality signal because renewal is an observed behavior, but Costco's model should not be generalized to non-membership retailers.
+
+5. **Private label and pricing architecture can support value and margin.** The ACSI 2023–2024 retail study says consumers responded positively to discounters and retailers offering promotions or private-label value; it specifically links Costco's general-merchandise and supermarket satisfaction to private-label offerings ([ACSI Retail and Consumer Shipping Study 2023–2024](https://theacsi.com/news-and-resources/press-releases/2024/01/30/press-release-retail-and-consumer-shipping-report-2024/)). This is evidence of a customer-perception mechanism, not proof that private label always has higher margins.
+
+6. **Retail media and marketplace services add higher-margin revenue streams.** Amazon's filing defines service sales to include third-party seller fees, fulfillment/shipping fees, advertising services and Prime membership fees, and attributes 2024 North America operating-income growth partly to advertising. Walmart similarly identifies advertising, marketplace, fulfillment and financial services as parts of its retail ecosystem. These streams can diversify economics beyond merchandise gross margin, but they introduce regulatory, platform, privacy and execution risks.
+
+## Most relevant industries/sub-industries
+
+- **Mass merchants and supercenters:** broad assortment, grocery/consumables, private label, stores plus e-commerce; scale and logistics are central.
+- **Warehouse clubs and membership retail:** recurring fees, high renewal, limited assortment, bulk/value proposition; Costco, BJ's and Sam's Club are relevant comparables (Sam's Club is a Walmart segment).
+- **E-commerce marketplaces and omnichannel platforms:** direct product sales plus third-party seller fees, advertising and fulfillment; Amazon, Walmart Marketplace and eBay are candidates.
+- **Supermarkets and grocery:** frequent transactions, essential demand, fresh-food execution, private label and loyalty; Kroger, Albertsons, Publix and H-E-B are relevant, with ownership/listing status checked separately.
+- **Consumer packaged goods (CPG):** household care, personal care, beauty, food and beverages; brand equity, distribution, innovation, price/mix and repeat purchase matter.
+- **Home improvement and specialty retail:** project demand, repair/maintenance, professional customers and category expertise; Home Depot, Lowe's, Ulta Beauty, Sephora (private) and Tractor Supply are relevant examples.
+- **Apparel, footwear and discretionary specialty:** brand, fashion cycle, inventory discipline and full-price sell-through dominate; Nike, TJX and Inditex are candidate names.
+- **Drugstores and health/beauty retail:** convenience and pharmacy relationships, but reimbursement, shrink and healthcare regulation create distinct risks.
+
+## Candidate leading companies (not a ranking)
+
+These are **candidate research names selected for scale, disclosed business relevance, or observable customer/loyalty signals—not a measured ranking**:
+
+- **Walmart** — mass retail, grocery, Sam's Club, e-commerce, marketplace, advertising and membership. FY2025 Walmart U.S. sales were $462.4 billion ([annual report](https://stock.walmart.com/_assets/_d172a7918f5003c834c91e68d309d655/walmart/db/950/9949/annual_report/Walmart+2025+Annual+Report.pdf)).
+- **Amazon** — e-commerce, third-party marketplace, fulfillment, Prime and retail advertising; 2024 North America sales $387.5 billion and operating income $25.0 billion ([2024 10-K](https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm)).
+- **Costco Wholesale** — membership warehouse retail; 2024 renewal and membership metrics are disclosed in its filing ([2024 10-K](https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/cost-20240901.htm)).
+- **Procter & Gamble** — branded household, personal care, beauty and family-care CPG; use its [annual-report archive](https://www.pginvestor.com/financials/annual-reports/default.aspx) and SEC filings for category-level sales, organic growth and operating-income history.
+- **The Home Depot and Lowe's** — home-improvement retail with project/professional exposure; evaluate comparable sales, gross margin, inventory turns and customer satisfaction separately.
+- **Kroger and Albertsons** — grocery scale, private label, pharmacy and loyalty data; assess merger/regulatory developments and comparable-store sales rather than treating grocery as homogeneous.
+- **TJX Companies, Nike, Ulta Beauty and L'Oréal** — useful specialty/brand comparables for off-price, footwear/apparel and beauty economics; compare inventory discipline, brand demand and international exposure.
+- **eBay and Etsy** — marketplace models with different category and seller dynamics; evaluate GMV, take rate, active buyers and repeat purchase.
+
+## Customer-quality and satisfaction signals
+
+Use multiple signals; no single score proves durable economics.
+
+- **Satisfaction benchmark:** ACSI's 2023–2024 study surveyed 40,264 customers. Overall retail-trade satisfaction rose 4% to 78/100; online retail was 80. The study reported Chewy 84, Amazon 83, Costco/eBay/HP Store 81, and Costco/H-E-B/Publix tied at 85 in supermarkets. These are measured ACSI results for the study period, not a current universal ranking and not a profitability ranking ([ACSI study release](https://theacsi.com/news-and-resources/press-releases/2024/01/30/press-release-retail-and-consumer-shipping-report-2024/)).
+- **Observed loyalty/retention:** Costco's 90.5% worldwide and 92.9% U.S./Canada renewal rates, together with paid-member growth, are stronger behavioral signals than stated intent for that business model ([Costco 2024 10-K](https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/cost-20240901.htm)). For other retailers, use loyalty retention, repeat purchase, cohort frequency and customer lifetime value where disclosed.
+- **Value and convenience:** ACSI reports that value, sales/promotions, private-label quality, navigation and checkout were important differentiators in measured categories. Track price perception, in-stock rates, delivery/pickup on-time rates, cancellation rates, search conversion and customer-service contacts.
+- **Returns and friction:** NRF/Happy Returns projected $890 billion of retail returns in 2024; 76% of consumers considered free returns important in deciding where to shop, while 93% of surveyed retailers called fraud/exploitative behavior significant ([NRF 2024 Consumer Returns](https://nrf.com/research/2024-consumer-returns-retail-industry)). Returns are both a customer-convenience signal and a margin/logistics risk.
+- **Reputation and trust:** Track complaint rates, product recalls, safety incidents, privacy/security incidents, seller-quality metrics and ACSI trend direction. Treat social sentiment as directional unless methodology and sampling are clear.
+
+## 20/20 data-refinery metrics to collect
+
+**Demand and growth:** total sales, comparable/same-store sales, e-commerce sales and share, units/volume, traffic, average basket, category mix, real versus nominal growth, and PCE by goods category.
+
+**Profitability and capital efficiency:** gross margin, operating margin, contribution margin by channel, advertising/marketplace/fee revenue, SG&A leverage, inventory turns, shrink, fulfillment cost per order, capex, free cash flow, ROIC and lease-adjusted returns.
+
+**Customer quality:** ACSI or other reputable satisfaction score, NPS where methodology is disclosed, repeat purchase rate, active buyers/members, membership renewal, churn, order frequency, basket size, loyalty enrollment, complaints, returns, refunds, delivery on-time rate and in-stock rate.
+
+**Brand/CPG:** organic sales growth, price/mix versus volume, market share from official or reputable industry data, innovation contribution, distribution/weighted distribution, brand consideration and repeat purchase.
+
+**Risk and resilience:** supplier concentration, geographic exposure, tariff sensitivity, labor cost, debt/lease burden, inventory obsolescence, shrink, fraud, privacy/cyber incidents and regulatory exposure.
+
+## Caveats and interpretation
+
+- **Do not rank companies from the candidate list.** The examples are a research universe; the report contains no invented league table.
+- **Company metrics are not directly comparable without normalization.** Fiscal year ends, accounting policies, gross versus net marketplace reporting, leases, fuel price effects and inclusion of e-commerce in comparable sales differ.
+- **Nominal sales growth can reflect inflation.** Pair revenue with unit/volume, real PCE, price/mix and margin data.
+- **The Census page currently displays later releases than the 2020s screening period.** Use the official downloadable time series and label each extracted observation by release date; the report uses the page's latest displayed Q2 2026 observation only as evidence that the channel remains material.
+- **ACSI and NRF are reputable public studies but not audited financial data.** ACSI is survey-based; NRF returns figures are projections and include survey assumptions.
+- **Retail is structurally competitive.** Scale, loyalty and omnichannel capabilities can create advantages, but they do not guarantee durable pricing power or high returns. Validate each candidate with filing-level margins, cash conversion and customer trends.
+
+## References
+
+- [BEA Consumer Spending](https://www.bea.gov/data/consumer-spending/main)
+- [U.S. Census Quarterly Retail E-Commerce Sales](https://www.census.gov/retail/ecommerce.html)
+- [Walmart FY2025 Annual Report](https://stock.walmart.com/_assets/_d172a7918f5003c834c91e68d309d655/walmart/db/950/9949/annual_report/Walmart+2025+Annual+Report.pdf)
+- [Amazon 2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm)
+- [Costco 2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/cost-20240901.htm)
+- [ACSI Retail and Consumer Shipping Study 2023–2024](https://theacsi.com/news-and-resources/press-releases/2024/01/30/press-release-retail-and-consumer-shipping-report-2024/)
+- [NRF/Happy Returns 2024 Consumer Returns in the Retail Industry](https://nrf.com/research/2024-consumer-returns-retail-industry)
+- [P&G Annual Reports and SEC Filings](https://www.pginvestor.com/financials/annual-reports/default.aspx)

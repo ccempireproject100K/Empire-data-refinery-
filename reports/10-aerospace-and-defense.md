@@ -1,0 +1,75 @@
+# Aerospace and defense — 20/20 sector findings
+
+## Bottom line: why the sector can be financially lucrative in the 2020s
+
+**Measured demand is unusually strong, but profitability is uneven.** SIPRI reports global military expenditure of **$2.718 trillion in 2024**, up **9.4% year over year** and **37% since 2015**; spending increased in every region and more than 100 countries raised spending. Europe’s spending rose **17%** in 2024, while Asia and Oceania rose **6.3%**. These are direct demand indicators for defense platforms, missiles, air defense, space, electronics, services, and sustainment ([SIPRI, *Trends in World Military Expenditure 2024*](https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024)).
+
+The U.S. Department of Defense’s FY2025 budget materials provide a durable, appropriated customer base spanning procurement, R&D, operations and maintenance, and security cooperation. The official package includes weapons-system acquisition tables, procurement (P-1), and research, development, test and evaluation (R-1) schedules ([U.S. DoD Comptroller, FY2025 Defense Budget Materials](https://comptroller.war.gov/Budget-Materials/Budget2025/)). This supports long program cycles, recurring sustainment revenue, and high barriers to entry. Allied rearmament and replenishment of inventories after support for Ukraine add demand, although budget execution and political priorities remain risks.
+
+Commercial aerospace is benefiting from post-pandemic air-travel normalization and fleet replacement. RTX’s 2024 annual report says commercial air travel had fully rebounded from COVID-19’s impact, and reports a **$218 billion total backlog**, **$80.738 billion GAAP sales**, **$6.538 billion operating profit**, and **$7.159 billion operating cash flow** in 2024 ([RTX 2024 Annual Report, SEC](https://www.sec.gov/Archives/edgar/data/101829/000130817925000069/rtx4383903-ars.pdf)). Its installed-base economics—approximately **$170 billion installed base** at Collins Aerospace, more than **115,000 aircraft**, and over **90,000 Pratt & Whitney engines in service**—illustrate why aftermarket parts, maintenance, repair and overhaul (MRO), and upgrades can be more recurring and profitable than original equipment.
+
+**Backlog converts demand into visibility.** Lockheed Martin reported 2024 sales of **$71.0 billion**, operating cash flow of **$7.0 billion**, free cash flow of **$5.3 billion**, and record backlog of **$176.0 billion**. However, it also recorded **$2.0 billion of pre-tax losses on classified programs**, showing that fixed-price development and execution risk can destroy margins even during strong demand ([Lockheed Martin, FY2024 results](https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-reports-fourth-quarter-and-full-year-2024)). RTX’s 2024 backlog rose to $218 billion from $196 billion; its defense backlog alone was $63 billion versus $52 billion in 2023 ([RTX 2024 Annual Report, SEC](https://www.sec.gov/Archives/edgar/data/101829/000130817925000069/rtx4383903-ars.pdf)).
+
+**The sector is not uniformly profitable.** Boeing’s 2024 10-K reports **$66.5 billion revenue but a $10.7 billion GAAP operating loss**, including a $7.97 billion Commercial Airplanes segment loss and a $5.41 billion Defense, Space & Security loss. Yet Boeing ended 2024 with **$521.3 billion total backlog**, including $435.2 billion commercial aircraft and $64.0 billion defense, space and security. The contrast demonstrates that backlog is not the same as near-term earnings: production quality, labor and supply-chain constraints, customer concessions, fixed-price contract estimates, certification, and delivery timing matter ([Boeing 2024 Form 10-K, SEC](https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm)).
+
+## Most relevant industries and profit pools
+
+1. **Defense prime contractors and mission systems:** combat aircraft, missiles, air and missile defense, naval systems, land systems, C4ISR, classified programs, and integrated command systems. Demand is supported by rising national budgets and long-lived installed fleets.
+2. **Defense electronics, sensors, avionics and cyber:** radars, electronic warfare, secure communications, guidance, mission software, and cybersecurity. These tend to benefit from modernization and software content, but procurement cycles and qualification requirements are demanding.
+3. **Space and national-security space:** satellites, launch, missile warning, resilient communications, remote sensing, and ground systems. Government demand, proliferated constellations, and strategic competition are important drivers.
+4. **Commercial aircraft OEMs and suppliers:** large commercial aircraft, regional/business aircraft, structures, propulsion, avionics, interiors and flight-control systems. The addressable opportunity is supported by traffic recovery and aging fleets; OEM economics remain constrained by certification, production and supply-chain execution.
+5. **Engines, components and aftermarket/MRO:** installed-base parts, repairs, maintenance and upgrades. Recurring service demand and switching costs can support attractive margins, though engine durability, recalls and shop-capacity constraints are material risks.
+6. **Uncrewed systems and counter-UAS:** drones, autonomy, tactical systems and counter-drone sensors/effectors. This is a high-growth judgment based on operational lessons and procurement priorities; it should not be treated as a measured industry ranking without a defined market dataset.
+7. **Civil aviation services and airport/air-traffic infrastructure:** maintenance, training, flight operations technology and air-traffic systems. These are exposed to passenger volumes and airline capital spending rather than only defense budgets.
+
+## Candidate leading companies (candidates, not a ranking)
+
+These names are **screening candidates selected for scale, public disclosure, backlog/installed-base evidence, and exposure to one or more of the profit pools above—not a claim that they are the best investments or an invented ranking**:
+
+- **Lockheed Martin** — defense prime spanning aeronautics, missiles, rotary and mission systems, and space; FY2024 record backlog and cash generation, with a major execution warning from classified-program losses ([FY2024 results](https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-reports-fourth-quarter-and-full-year-2024)).
+- **RTX** — Collins Aerospace, Pratt & Whitney and Raytheon; unusually broad commercial/defense mix, large installed bases, $218 billion 2024 backlog and positive GAAP operating profit ([2024 Annual Report](https://www.sec.gov/Archives/edgar/data/101829/000130817925000069/rtx4383903-ars.pdf)).
+- **Boeing** — commercial aircraft, defense/space/security and global services; massive backlog but 2024 losses and regulatory/quality issues make it an execution-recovery candidate rather than a clean profitability example ([2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm)).
+- **Northrop Grumman** — candidate for defense, space, strategic systems and mission systems exposure; validate current backlog, margins and program risk directly in its latest 10-K before using it in a ranking.
+- **General Dynamics** — candidate spanning aerospace (Gulfstream), shipbuilding, combat systems and IT; validate segment economics and backlog in its latest 10-K.
+- **BAE Systems** — candidate for European/U.S. defense electronics, platforms and services; validate order intake, backlog and currency effects in its annual report.
+- **Airbus** — candidate for commercial aircraft, helicopters, defense and space; compare delivery cadence, backlog, supply-chain execution and commercial/defense mix in its annual report.
+- **Safran** — candidate for propulsion, aerospace equipment and services; attractive aftermarket/installed-base angle, subject to engine-program and supplier execution checks.
+
+## Customer-quality and satisfaction signals
+
+**Defense customer/program quality:** GAO’s 2024 weapon-systems assessment is a strong independent signal. It covers **108 of DOD’s costliest weapon programs** and says DOD remains poorly positioned to field systems quickly. For 31 major defense acquisition programs, the average program that had not delivered initial capability planned to take **over 10 years**; for programs that had delivered capability, average time rose from **8 to 11 years** versus original plans. GAO also found recurring cost growth, delays, weak adoption of leading product-development practices, cybersecurity timing gaps and software-workforce challenges ([GAO-24-106831](https://www.gao.gov/products/gao-24-106831)). This is measured evidence of customer/program performance risk, not a company ranking.
+
+**Commercial-aircraft regulator signal:** The FAA’s response to the January 2024 737-9 MAX door-plug incident required Boeing to implement a safety roadmap, strengthen its Safety Management System, improve supplier oversight and training, increase internal audits, and accept more inspectors and production-process audits. The FAA reported non-compliance issues involving manufacturing process control, parts handling/storage and product control ([FAA, May 30, 2024](https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes)). Regulatory findings, delivery delays, warranty/recall charges, customer concessions and aircraft-on-ground events are therefore important quality signals when comparing commercial suppliers.
+
+**End-customer satisfaction (downstream aviation, not OEM-specific):** J.D. Power’s 2024 North America Airline Satisfaction Study surveyed **9,582 passengers** and measured staff, digital tools, ease, trust, onboard experience, pre/post-flight experience and value. Delta ranked highest in first/business and premium economy; Southwest ranked highest in economy/basic economy. The study found ease of travel and trust were the two largest satisfaction drivers, and negative media coverage was associated with trust scores **400 points lower on a 1,000-point scale** ([J.D. Power 2024 Airline Satisfaction Study](https://www.jdpower.com/business/press-releases/2024-north-america-airline-satisfaction-study/)). This is useful context for airline-facing quality, reliability and service, but it must not be misrepresented as a direct aircraft-OEM satisfaction score.
+
+## Free public data sources and metrics to track
+
+- **SIPRI military expenditure database/fact sheets:** country and regional military spending; annual growth, GDP burden and long-run trends ([SIPRI](https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024)).
+- **U.S. DoD budget books:** procurement, RDT&E, operations and maintenance, weapons-system line items and security cooperation ([FY2025 Comptroller materials](https://comptroller.war.gov/Budget-Materials/Budget2025/)).
+- **SEC EDGAR and company annual reports:** GAAP revenue, operating income, margins, cash flow, backlog/RPO, segment mix, contract estimates, customer concentration and risk disclosures ([Boeing 10-K](https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm); [RTX annual report](https://www.sec.gov/Archives/edgar/data/101829/000130817925000069/rtx4383903-ars.pdf)).
+- **GAO weapon-systems assessments:** cost growth, schedule, time-to-capability, cybersecurity and software-workforce indicators ([GAO](https://www.gao.gov/products/gao-24-106831)).
+- **FAA safety and production oversight:** incidents, airworthiness, audits, corrective actions and manufacturing quality signals ([FAA Boeing oversight](https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes)).
+- **J.D. Power airline satisfaction:** downstream customer satisfaction and trust signals ([2024 study](https://www.jdpower.com/business/press-releases/2024-north-america-airline-satisfaction-study/)).
+
+Track **backlog and book-to-bill; funded versus unfunded backlog; revenue growth; GAAP and segment operating margin; free cash flow and conversion; fixed-price EAC/catch-up adjustments; contract mix; defense budget and RDT&E/procurement growth; aircraft deliveries and on-time delivery; order cancellations; fleet utilization; installed-base and aftermarket revenue; warranty/recall and quality charges; safety findings; program cost/schedule variance; time-to-capability; customer concentration; and independent customer trust/satisfaction scores**.
+
+## Caveats
+
+- Backlog is a forward-looking visibility metric, not a profit guarantee. Boeing and Lockheed’s 2024 results show how quality events and fixed-price/classified-program losses can overwhelm demand.
+- Defense spending is not identical to aerospace-and-defense revenue; personnel and operations budgets do not all flow to manufacturers. Use procurement, RDT&E and relevant program-level books for addressable demand.
+- Company backlog definitions differ. RTX’s backlog is remaining performance obligations; Boeing separately discloses contractual and unobligated backlog. Comparisons require definition and currency checks.
+- Defense data are often classified, and commercial contracts can include options, termination rights, escalation clauses and customer funding uncertainty.
+- J.D. Power’s airline study measures airline passenger experience, not OEM product quality. GAO measures government acquisition outcomes, not shareholder returns.
+- The candidate list is intentionally a diligence starting set, not a measured ranking. A defensible ranking would require a defined universe, date, geography, public-company versus private-company scope, and comparable profitability/quality metrics.
+
+## References
+
+[1]: https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024 "SIPRI, Trends in World Military Expenditure 2024"
+[2]: https://comptroller.war.gov/Budget-Materials/Budget2025/ "U.S. Department of Defense Comptroller, FY2025 Defense Budget Materials"
+[3]: https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-reports-fourth-quarter-and-full-year-2024 "Lockheed Martin, Fourth Quarter and Full Year 2024 Financial Results"
+[4]: https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm "The Boeing Company, 2024 Form 10-K"
+[5]: https://www.sec.gov/Archives/edgar/data/101829/000130817925000069/rtx4383903-ars.pdf "RTX, 2024 Annual Report"
+[6]: https://www.gao.gov/products/gao-24-106831 "U.S. GAO, Weapon Systems Annual Assessment 2024"
+[7]: https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes "FAA, Boeing Safety and Production Quality Fixes"
+[8]: https://www.jdpower.com/business/press-releases/2024-north-america-airline-satisfaction-study/ "J.D. Power, 2024 North America Airline Satisfaction Study"
