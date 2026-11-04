@@ -139,11 +139,11 @@ The scores below are **analyst estimates derived from the supplied briefs**, not
 
 ### What supports the highest-priority group
 
-- **Technology and software:** scalable digital delivery, subscriptions, switching costs, and cloud/AI demand support an attractive base; , , and issuer filings such as [Microsoft FY2025](https://www.microsoft.com/investor/reports/ar25/index.html) are starting evidence—not sector-wide margin proof.
-- **AI and data infrastructure:** the [Stanford HAI AI Index 2025](https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf), [NVIDIA FY2025 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025), and the  support large demand and physical constraints. They do not eliminate hyperscaler concentration, capex, power, or rapid product-cycle risk.
+- **Technology and software:** scalable digital delivery, subscriptions, switching costs, and cloud/AI demand support an attractive base; Gartner’s public-cloud forecast, Census/FRED software publisher revenue, and issuer filings such as [Microsoft FY2025](https://www.microsoft.com/investor/reports/ar25/index.html) are starting evidence—not sector-wide margin proof.
+- **AI and data infrastructure:** the [Stanford HAI AI Index 2025](https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf), [NVIDIA FY2025 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025), and the IEA’s AI energy-demand analysis support large demand and physical constraints. They do not eliminate hyperscaler concentration, capex, power, or rapid product-cycle risk.
 - **Healthcare/pharma and life sciences:** [CMS reports U.S. national health expenditure of $5.3T in 2024](https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet) and the [FDA lists 50 novel-drug approvals for 2024](https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2024). Those are demand/innovation indicators, not a forecast of any issuer’s returns.
-- **Financial services/fintech:** payment networks, banks, insurers, asset managers, and fintechs require different models. Use audited reports—e.g., , —with capital, credit, and complaint/satisfaction evidence.
-- **Energy/utilities, renewables, and defense:** electricity/load and grid investment, contracted revenue, and government demand are tangible opportunity drivers. The  and [SIPRI’s 2024 military-spending release](https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024) are sector context, not company earnings forecasts.
+- **Financial services/fintech:** payment networks, banks, insurers, asset managers, and fintechs require different models. Use audited reports—e.g., Visa’s annual-report site, Bank of America’s 2024 filing—with capital, credit, and complaint/satisfaction evidence.
+- **Energy/utilities, renewables, and defense:** electricity/load and grid investment, contracted revenue, and government demand are tangible opportunity drivers. The IEA World Energy Investment 2024 and [SIPRI’s 2024 military-spending release](https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024) are sector context, not company earnings forecasts.
 
 ### Explicit ranking caveats
 
@@ -195,7 +195,7 @@ Build a versioned, auditable data set rather than copying headline claims into a
 | Workstream | Data to capture | Preferred free sources | Collection procedure | Refresh |
 |---|---|---|---|---|
 | Market size and demand | Official sector output/spend, units, installed base, spending, employment, price/volume, forecasts separately labeled | Census, BEA, BLS, CMS, EIA, DOE, FDA, USDA, FCC, OECD, IEA, IRENA, SIPRI, IFR | Save URL, release date, table title/series ID, units, geography, vintage, and whether actual/forecast | Monthly/quarterly as released; annual benchmark refresh |
-| Financial statements | Revenue, segment sales, GAAP operating income, net income, cash flow, capex, balance sheet, shares, debt | , issuer annual reports/10-K/20-F | Use audited annual filings first; extract source page/table; retain reported and calculated fields separately | Quarterly for issuers; annual QA after 10-K/20-F |
+| Financial statements | Revenue, segment sales, GAAP operating income, net income, cash flow, capex, balance sheet, shares, debt | SEC EDGAR, issuer annual reports/10-K/20-F | Use audited annual filings first; extract source page/table; retain reported and calculated fields separately | Quarterly for issuers; annual QA after 10-K/20-F |
 | Operating KPIs | RPO/backlog, subscriptions, customers, retention, transactions, ARPU, utilization, capacity, reliability | Earnings releases, investor presentations, annual reports; regulators where available | Preserve the issuer definition verbatim; tag **issuer-reported**; do not impute missing values | Quarterly/annual |
 | Customer quality | Satisfaction/experience, complaints, service, outcome, retention, reliability | ACSI, J.D. Power, CAHPS/HCAHPS, CMS, CFPB, FAA/FRA, regulators, app stores as supplemental only | Record study universe, sample, dates, scale, methodology, segment and score; compute complaints per relevant denominator | On study release; quarterly for operational complaints |
 | Regulatory/safety | Recalls, compliance, clinical approvals, safety outcomes, audits, outages, rate cases | FDA, CMS, FAA, GAO, CISA, state utility commissions, CFPB, FERC/EIA | Time-stamp events and distinguish allegation, finding, enforcement, and resolved action | Monthly monitoring; material-event alerts |
@@ -261,23 +261,23 @@ The directory below prioritizes public, reproducible sources cited in the suppli
 
 | Source | Best uses | Important caveat |
 |---|---|---|
-|  | U.S. issuer 10-K/10-Q/8-K, audited financials, risk factors, segments, reconciliations | Issuer definitions still vary; non-U.S. and private companies have uneven coverage |
+| SEC EDGAR | U.S. issuer 10-K/10-Q/8-K, audited financials, risk factors, segments, reconciliations | Issuer definitions still vary; non-U.S. and private companies have uneven coverage |
 | [BEA consumer spending](https://www.bea.gov/data/consumer-spending/main) and [Census](https://www.census.gov/) | Macro demand, retail/e-commerce, construction, trade, business activity | Release calendars and revisions matter; series are not company profitability |
-|  | Employment, wages, occupational and industry outlook | Employment is not revenue or profit |
-|  | Consistent U.S. satisfaction benchmarks | Survey based; use within the same study/year/category |
-|  | Study-specific satisfaction and quality evidence | Geography, customer cohort, and methodology are bounded |
-|  | Financial-services complaint trends | Not a representative sample; normalize by scale and product |
+| BLS industry data | Employment, wages, occupational and industry outlook | Employment is not revenue or profit |
+| ACSI | Consistent U.S. satisfaction benchmarks | Survey based; use within the same study/year/category |
+| J.D. Power | Study-specific satisfaction and quality evidence | Geography, customer cohort, and methodology are bounded |
+| CFPB Complaint Database | Financial-services complaint trends | Not a representative sample; normalize by scale and product |
 
 ### Technology, AI, telecom, and industrial digitalization
 
 | Source | Primary application |
 |---|---|
-|  | Public-cloud demand outlook; forecast, not actual revenue |
-|  | U.S. software-publisher revenue context |
+| Gartner public-cloud spending forecast | Public-cloud demand outlook; forecast, not actual revenue |
+| FRED/Census software publisher revenue series | U.S. software-publisher revenue context |
 | [Stanford HAI AI Index 2025](https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf) | AI adoption, investment, and model ecosystem context |
-|  | AI-data-center electricity-demand scenarios |
-|  | Connectivity/access context |
-|  | Fixed-broadband performance evidence |
+| IEA Energy and AI | AI-data-center electricity-demand scenarios |
+| OECD Digital Economy Outlook 2024 | Connectivity/access context |
+| FCC Measuring Broadband America | Fixed-broadband performance evidence |
 | [International Federation of Robotics](https://ifr.org/ifr-press-releases/news/global-robot-demand-in-factories-doubles-over-10-years) | Robot installations and installed-base trend |
 | [U.S. Census industrial robotic equipment](https://www.census.gov/library/publications/2024/econ/2021-asm-robotic-equipment.html) | U.S. manufacturing robot usage/capex; experimental data limitations apply |
 
@@ -292,7 +292,7 @@ The directory below prioritizes public, reproducible sources cited in the suppli
 | [AHRQ CAHPS](https://www.ahrq.gov/cahps/index.html) | Patient-experience methodology/resources |
 | [CBO R&D-cost study](https://www.cbo.gov/publication/57126) | Drug-development cost/risk context; methodological assumptions must be retained |
 | [SIPRI military-spending trends](https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-world-military-expenditure-2024) | Global defense-demand context |
-|  and  | Procurement/RDT&E and program execution risk |
+| U.S. DoD FY2025 budget materials and GAO weapon-systems assessment | Procurement/RDT&E and program execution risk |
 
 ### Energy, climate, transportation, mobility, and real assets
 
@@ -300,10 +300,10 @@ The directory below prioritizes public, reproducible sources cited in the suppli
 |---|---|
 | [EIA electricity data](https://www.eia.gov/electricity/data.php) | Generation, electricity sales, fuel and reliability context |
 | [DOE/LBNL U.S. data-center energy-use report](https://www.energy.gov/eere/buildings/articles/2024-united-states-data-center-energy-usage-report) | U.S. data-center load analysis |
-|  | Global investment context; forecast/estimate distinctions apply |
-|  | Cost trends for renewable technologies |
-|  | Freight value, tonnage, mode, and economic contribution |
-|  | EV sales, fleet, charging, and policy context |
+| IEA World Energy Investment 2024 | Global investment context; forecast/estimate distinctions apply |
+| IRENA renewable-power generation costs | Cost trends for renewable technologies |
+| BTS Freight Facts and Figures | Freight value, tonnage, mode, and economic contribution |
+| IEA Global EV Outlook 2025 | EV sales, fleet, charging, and policy context |
 | [Alternative Fuels Data Center charging data](https://afdc.energy.gov/data/10963) | U.S. charging-infrastructure statistics |
 | [Census construction spending](https://www.census.gov/construction/c30/current/index.html) and [new residential construction](https://www.census.gov/construction/nrc/) | Construction and housing activity, not company earnings |
 
@@ -314,10 +314,10 @@ The directory below prioritizes public, reproducible sources cited in the suppli
 | [Census Quarterly Retail E-Commerce Sales](https://www.census.gov/retail/ecommerce.html) | U.S. e-commerce activity; U.S.-only and not platform-level profitability |
 | [National Retail Federation returns research](https://nrf.com/research/2024-consumer-returns-retail-industry) | Retail-return context; projections are not audited actuals |
 | [USDA ERS Ag and Food Sectors](https://www.ers.usda.gov/data-products/ag-and-food-statistics-charting-the-essentials/ag-and-food-sectors-and-the-economy) and [Food Dollar](https://www.ers.usda.gov/data-products/food-dollar) | Food/agriculture spending, value-chain, and farm/marketing context |
-|  | Agricultural demand scenarios and projections |
+| OECD-FAO Agricultural Outlook 2024–2033 | Agricultural demand scenarios and projections |
 | [U.S. International Trade Administration games-sector page](https://www.trade.gov/media-entertainment-video-games-sector) and [ESA data insights](https://www.theesa.com/data-insights/) | Games industry context; source-specific methodology |
 | [WTTC 2024 global release](https://wttc.org/news/travel-and-tourism-set-to-break-all-records-in-2024-reveals-wttc) and [BEA Travel & Tourism Satellite Account](https://apps.bea.gov/scb/issues/2025/02-february/0225-travel-tourism-satellite-account.htm) | Travel/tourism demand context; distinguish modeled industry impacts from company revenue |
-| [NCES education fast facts](https://nces.ed.gov/fastfacts/display.asp?id=66) and  | Education-spend and services-employment context; neither equals vendor profitability |
+| [NCES education fast facts](https://nces.ed.gov/fastfacts/display.asp?id=66) and BLS professional-services outlook | Education-spend and services-employment context; neither equals vendor profitability |
 
 ---
 
@@ -376,7 +376,7 @@ This checklist identifies what must be tested before elevating a sector/company 
 
 ## Appendix B — selected issuer filing examples
 
-The following are useful starting points for reproducible company analysis, not endorsements or cross-company comparisons: , , [JPMorgan 2023 annual report](https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf), , [NextEra 2024 annual report](https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/investor-materials/shareholder-resources/2025/2024%20NEE%20Annual%20Report.pdf), [Lockheed Martin FY2024 results](https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-reports-fourth-quarter-and-full-year-2024), , , , and .
+The following are useful starting points for reproducible company analysis, not endorsements or cross-company comparisons: Salesforce FY2025 filing, NVIDIA FY2025 10-K, [JPMorgan 2023 annual report](https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf), Johnson & Johnson 2024 10-K, [NextEra 2024 annual report](https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/investor-materials/shareholder-resources/2025/2024%20NEE%20Annual%20Report.pdf), [Lockheed Martin FY2024 results](https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-reports-fourth-quarter-and-full-year-2024), Amazon 2024 10-K, Netflix 2024 10-K, Prologis 2024 10-K, and Marriott 2024 10-K.
 
 ---
 

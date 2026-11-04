@@ -99,11 +99,20 @@ choice**. Its delivery checklist is complete except one item: once the site
 is deployed, create the recurring weekly ScheduleTask for the source-checking
 engine.
 
-**Note on sector copies:** the site carries its own sector texts under
-`site/public/content/sectors/`, which differ slightly from the standalone
-reports in `reports/`. Both are preserved intentionally — `reports/` is the
-report corpus as received; the site copies are the site's own rendering
-inputs.
+**Note on sector copies:** the site's sector texts under
+`site/public/content/sectors/` are generated from `reports/` by
+`site/scripts/build-data.py`. The only intended difference is that links to
+sources in `site/public/source-exclusions.json` (sources that failed the live
+availability audit) are removed; the source's name stays in the sentence, so
+attribution survives without the dead link.
+
+**Rebuild and test** (from `site/`):
+
+```
+python3 scripts/build-data.py   # regenerates data.json and content/ from reports/ + synthesis/
+node --test                     # server smoke tests (bad URLs, path traversal, API, citations)
+npm start                       # http://localhost:3000
+```
 
 ## Corpus conventions
 

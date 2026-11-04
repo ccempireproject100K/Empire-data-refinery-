@@ -1,15 +1,18 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ROOT = Path('/home/ubuntu')
-REPORT = SOURCE_ROOT / '20-20-research-report.md'
-SECTOR_ROOT = SOURCE_ROOT / '20-20-sector-reports'
+REPO_ROOT = ROOT.parent
+# Sources default to this repository (reports/NN-*.md and the synthesis report).
+# Set REFINERY_REPORT / REFINERY_SECTOR_ROOT to build from another location.
+REPORT = Path(os.environ.get('REFINERY_REPORT', REPO_ROOT / 'synthesis' / '20-20-sector-research-synthesis.md'))
+SECTOR_ROOT = Path(os.environ.get('REFINERY_SECTOR_ROOT', REPO_ROOT / 'reports'))
 PUBLIC = ROOT / 'public'
 CONTENT = PUBLIC / 'content'
 EXCLUSIONS_PATH = PUBLIC / 'source-exclusions.json'
@@ -69,7 +72,15 @@ def bullet_items(block: str) -> list[str]:
 
 def sanitize_public_document(text: str, excluded_urls: set[str], excluded_hosts: set[str]) -> str:
     def remove_blocked_link(match: re.Match[str]) -> str:
-        return '' if urlparse(match.group(2)).netloc.lower() in excluded_hosts else match.group(0)
+        # Hide the URL of an excluded source but keep its name, so the sentence
+        # still says who the claim comes from (e.g. "The IEA ... estimates").
+        url = match.group(2)
+        if url in excluded_urls or urlparse(url).netloc.lower() in excluded_hosts:
+            label = match.group(1)
+            # A bare footnote marker like [7] carries no attribution; drop it
+            # rather than leave a stray number glued to the text ("0.8%.7").
+            return '' if re.fullmatch(r'[\d\s,]+', label) else label
+        return match.group(0)
     text = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', remove_blocked_link, text)
     for url in excluded_urls:
         text = text.replace(url, '')
@@ -123,7 +134,8 @@ sectors = []
 for path in sorted(SECTOR_ROOT.glob('*.md')):
     text = path.read_text()
     blocks = heading_blocks(text)
-    file_number = int(path.stem)
+    sector_id = path.stem[:2]  # accepts "02.md" and "02-artificial-intelligence-....md"
+    file_number = int(sector_id)
     title_match = re.search(r'^#\s+(.+)$', text, re.M)
     title = title_match.group(1).strip() if title_match else ranked_names.get(file_number, f'Sector {file_number}')
     # The reports are numbered in the same order as the synthesis; this avoids title suffix drift.
@@ -140,7 +152,7 @@ for path in sorted(SECTOR_ROOT.glob('*.md')):
     references = [ref for ref in references if ref['url'] not in excluded_urls and urlparse(ref['url']).netloc.lower() not in excluded_hosts]
     ranking = rankings.get(name, {})
     sectors.append({
-        'id': path.stem,
+        'id': sector_id,
         'slug': slugify(name),
         'name': name,
         'rank': ranking.get('rank', file_number),
@@ -153,14 +165,14 @@ for path in sorted(SECTOR_ROOT.glob('*.md')):
         'metrics': bullet_items(metrics_block),
         'caveats': bullet_items(caveats_block),
         'references': references,
-        'sourceDocument': f'/content/sectors/{path.name}',
+        'sourceDocument': f'/content/sectors/{sector_id}.md',
     })
 
 sectors.sort(key=lambda item: item['rank'])
 sector_public = CONTENT / 'sectors'
 sector_public.mkdir(parents=True, exist_ok=True)
 for path in sorted(SECTOR_ROOT.glob('*.md')):
-    (sector_public / path.name).write_text(sanitize_public_document(path.read_text(), excluded_urls, excluded_hosts))
+    (sector_public / f'{path.stem[:2]}.md').write_text(sanitize_public_document(path.read_text(), excluded_urls, excluded_hosts))
 (CONTENT / 'full-research-report.md').write_text(sanitize_public_document(REPORT.read_text(), excluded_urls, excluded_hosts))
 
 export = {
