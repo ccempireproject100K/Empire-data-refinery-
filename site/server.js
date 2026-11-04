@@ -8,13 +8,23 @@ const port = Number(process.env.PORT || 3000);
 const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.md': 'text/markdown; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml', '.ico': 'image/x-icon' };
 const jsonFile = async name => JSON.parse(await readFile(path.join(root, name), 'utf8'));
 const apiDiscovery = { name: '20/20 Research API', version: '2026-10-15', description: 'Read-only access to sectors, claims, public sources, comparisons, source updates, free public data catalog and samples, normalized metric recipes, company candidates, vintage metadata, comparability warnings, and the AI Skills Archive.', contract: '/api/openapi.json', endpoints: { sectors: '/api/v1/sectors', sector: '/api/v1/sectors/{slug}', claims: '/api/v1/claims/{id}', sources: '/api/v1/sources', updates: '/api/v1/updates', catalog: '/api/v1/catalog', samples: '/api/v1/samples', metrics: '/api/v1/metrics', companies: '/api/v1/companies', vintages: '/api/v1/vintages', comparability: '/api/v1/comparability', search: '/api/v1/search?q=term', compare: '/api/v1/compare?slugs=sector-a,sector-b', skills: '/api/v1/skills', skill: '/api/v1/skills/{slug}' }, security: 'Public read-only endpoints. No API keys or secret values are returned.' };
-function safePath(urlPath) { const decoded = decodeURIComponent(urlPath.split('?')[0]); const candidate = path.normalize(path.join(root, decoded)); return candidate.startsWith(root) ? candidate : null; }
+// Returns null for malformed percent-encoding (decodeURIComponent throws; uncaught, that
+// crashed the whole server) and for any path outside public/. The separator check stops
+// a sibling folder such as "public-private" passing a plain prefix test.
+function safePath(urlPath) {
+  let decoded;
+  try { decoded = decodeURIComponent(urlPath.split('?')[0]); } catch { return null; }
+  const candidate = path.normalize(path.join(root, decoded));
+  return candidate === root || candidate.startsWith(root + path.sep) ? candidate : null;
+}
 function apiResponse(res, body, status = 200) { res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-cache', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Accept, Content-Type' }); res.end(JSON.stringify(body)); }
 function notFound(res, message = 'Not found') { return apiResponse(res, { error: { code: 'not_found', message } }, 404); }
 async function handleApi(req, res, parsed) {
   if (req.method === 'OPTIONS') return apiResponse(res, { ok: true });
   if (req.method !== 'GET') return apiResponse(res, { error: { code: 'method_not_allowed', message: 'This API is read-only.' } }, 405);
-  const parts = parsed.pathname.replace(/^\/api\/v1\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
+  let parts;
+  try { parts = parsed.pathname.replace(/^\/api\/v1\/?/, '').split('/').filter(Boolean).map(decodeURIComponent); }
+  catch { return apiResponse(res, { error: { code: 'bad_request', message: 'Malformed URL encoding.' } }, 400); }
   const [data, evidence, skills, catalog, recipes] = await Promise.all([jsonFile('data.json'), jsonFile('evidence.json'), jsonFile('skills.json'), jsonFile('data-catalog.json'), jsonFile('metric-recipes.json')]);
   const [route, id] = parts;
   if (!route) return apiResponse(res, apiDiscovery);
@@ -36,7 +46,9 @@ async function handleApi(req, res, parsed) {
   return notFound(res, 'Unknown API endpoint. Read /api/v1/ for discovery.');
 }
 const server = http.createServer(async (req, res) => {
-  const parsed = new URL(req.url || '/', `http://${req.headers.host || 'localhost'}`);
+  let parsed;
+  try { parsed = new URL(req.url || '/', 'http://localhost'); }
+  catch { res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' }); return res.end('Bad request'); }
   if (parsed.pathname.startsWith('/api/v1')) { try { return await handleApi(req, res, parsed); } catch (error) { console.error(error); return apiResponse(res, { error: { code: 'internal_error', message: 'The API could not load its public dataset.' } }, 500); } }
   let filePath = safePath(parsed.pathname);
   try { if (!filePath) throw new Error('bad path'); const info = await stat(filePath); if (info.isDirectory()) filePath = path.join(filePath, 'index.html'); } catch { filePath = path.join(root, 'index.html'); }
